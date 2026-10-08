@@ -1,0 +1,56 @@
+# Builds and deploys the LayerProof public website to GitHub Pages.
+# This file is active when the CONTENTS of website/ are the root of the public website repository.
+# Repository Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+name: Deploy website to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Syntax and render check
+        run: node tools/syntax-check.mjs
+      - name: Build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          SITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+          # Optional repository variables (Settings -> Secrets and variables -> Actions -> Variables).
+          # Leave DEMO_URL unset until the read-only demo is really hosted: no demo link is rendered without it.
+          DEMO_URL: ${{ vars.DEMO_URL }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          CONTACT_FORM_URL: ${{ vars.CONTACT_FORM_URL }}
+        run: node build.mjs
+      - name: Check links, assets, private content and claims
+        run: node tools/check.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
