@@ -1,0 +1,477 @@
+[
+ {
+  "id": "provenance-fingerprint",
+  "src": "docs/screenshots/07-provenance.png",
+  "milestone": "Foundation & provenance",
+  "crop": [
+   296,
+   50,
+   1312,
+   318
+  ],
+  "data": "Synthetic 225-byte test file (software test)",
+  "shows": "SHA-256 fingerprint of a stored file with the three integrity checks",
+  "pages": [
+   "index#traceability",
+   "product#project"
+  ],
+  "alt": "LayerProof file page showing a SHA-256 provenance fingerprint and three passed integrity checks.",
+  "sizes": {
+   "1400": {
+    "file": "provenance-fingerprint-1400.webp",
+    "width": 1016,
+    "height": 268,
+    "bytes": 19108
+   },
+   "760": {
+    "file": "provenance-fingerprint-760.webp",
+    "width": 760,
+    "height": 200,
+    "bytes": 12902
+   }
+  }
+ },
+ {
+  "id": "data-datasets",
+  "src": "docs/screenshots/week2/09-data-home.png",
+  "milestone": "Canonical data ingestion",
+  "crop": [
+   262,
+   56,
+   1706,
+   972
+  ],
+  "data": "Real MnDOT IC sample rows and real FHWA LTPP DCP records (not co-located, never paired)",
+  "shows": "Imported datasets, versions and ingestion runs",
+  "pages": [
+   "product#data"
+  ],
+  "alt": "LayerProof Data page listing imported datasets, their versions and ingestion runs.",
+  "sizes": {
+   "1400": {
+    "file": "data-datasets-1400.webp",
+    "width": 1400,
+    "height": 888,
+    "bytes": 38002
+   },
+   "760": {
+    "file": "data-datasets-760.webp",
+    "width": 760,
+    "height": 482,
+    "bytes": 14644
+   }
+  }
+ },
+ {
+  "id": "evidence-validation",
+  "src": "docs/screenshots/week3/01-ic-validation-l0-l3.png",
+  "milestone": "Validation & sufficiency",
+  "crop": [
+   262,
+   56,
+   1706,
+   1440
+  ],
+  "data": "Real MnDOT IC sample rows",
+  "shows": "Validation levels L0\u2013L3 with findings that block spatial and temporal use until confirmed",
+  "pages": [
+   "index#screens",
+   "product#evidence"
+  ],
+  "alt": "LayerProof Evidence page with validation levels L0 to L3 and a table of findings.",
+  "sizes": {
+   "1400": {
+    "file": "evidence-validation-1400.webp",
+    "width": 1400,
+    "height": 1342,
+    "bytes": 136298
+   },
+   "760": {
+    "file": "evidence-validation-760.webp",
+    "width": 760,
+    "height": 728,
+    "bytes": 48942
+   }
+  }
+ },
+ {
+  "id": "map-ic",
+  "src": "docs/screenshots/week4/01-map-all-passes-cmv.png",
+  "milestone": "Map & evidence workspace",
+  "crop": [
+   262,
+   56,
+   1706,
+   1085
+  ],
+  "data": "Real MnDOT IC sample rows; the ringed spot markers are a labelled SYNTHETIC fixture",
+  "shows": "IC observations on the map coloured by the vendor's source metric, with the evidence-in-view panel",
+  "pages": [
+   "index#screens",
+   "product#map"
+  ],
+  "alt": "LayerProof Map page showing intelligent-compaction observations along a road alignment with layer controls and an evidence summary.",
+  "sizes": {
+   "1400": {
+    "file": "map-ic-1400.webp",
+    "width": 1400,
+    "height": 998,
+    "bytes": 100084
+   },
+   "760": {
+    "file": "map-ic-760.webp",
+    "width": 760,
+    "height": 542,
+    "bytes": 36454
+   }
+  }
+ },
+ {
+  "id": "science-gate",
+  "src": "docs/screenshots/week5/05-sparc-real-gate-ready-models.png",
+  "milestone": "Real paired scientific baseline",
+  "crop": [
+   255,
+   1392,
+   1708,
+   2275
+  ],
+  "data": "Real SPARC field-trial data",
+  "shows": "The real-paired-evidence gate: every check listed, statistical adequacy left UNRESOLVED",
+  "pages": [
+   "index#screens",
+   "research#gate"
+  ],
+  "alt": "LayerProof Science page showing the real paired evidence gate with each check and its result.",
+  "sizes": {
+   "1400": {
+    "file": "science-gate-1400.webp",
+    "width": 1400,
+    "height": 851,
+    "bytes": 81786
+   },
+   "760": {
+    "file": "science-gate-760.webp",
+    "width": 760,
+    "height": 462,
+    "bytes": 28706
+   }
+  }
+ },
+ {
+  "id": "support-abstain-sparc",
+  "src": "docs/screenshots/week6/01-sparc-real-evidence-support.png",
+  "milestone": "Evidence support & abstention",
+  "crop": [
+   255,
+   3750,
+   1708,
+   4414
+  ],
+  "data": "Real SPARC field-trial data",
+  "shows": "Evidence-support assessment: inference ABSTAIN, units by evidence state, coverage counts",
+  "pages": [
+   "index#abstention",
+   "evidence#states"
+  ],
+  "alt": "LayerProof evidence support panel stating INFERENCE: ABSTAIN with counts of units by evidence state.",
+  "sizes": {
+   "1400": {
+    "file": "support-abstain-sparc-1400.webp",
+    "width": 1400,
+    "height": 640,
+    "bytes": 55148
+   },
+   "760": {
+    "file": "support-abstain-sparc-760.webp",
+    "width": 760,
+    "height": 347,
+    "bytes": 21020
+   }
+  }
+ },
+ {
+  "id": "support-units-sparc",
+  "src": "docs/screenshots/week6/01-sparc-real-evidence-support.png",
+  "milestone": "Evidence support & abstention",
+  "crop": [
+   255,
+   4480,
+   1708,
+   4940
+  ],
+  "data": "Real SPARC field-trial data",
+  "shows": "Per-unit evidence states with the reason codes behind each",
+  "pages": [
+   "evidence#states"
+  ],
+  "alt": "Table of location and pass units with their evidence state and reason codes.",
+  "sizes": {
+   "1400": {
+    "file": "support-units-sparc-1400.webp",
+    "width": 1400,
+    "height": 443,
+    "bytes": 50472
+   },
+   "760": {
+    "file": "support-units-sparc-760.webp",
+    "width": 760,
+    "height": 241,
+    "bytes": 18894
+   }
+  }
+ },
+ {
+  "id": "support-no-anchor-mndot",
+  "src": "docs/screenshots/week6/06-mndot-no-physical-anchor.png",
+  "milestone": "Evidence support & abstention",
+  "crop": [
+   262,
+   1228,
+   1706,
+   2430
+  ],
+  "data": "Real MnDOT IC sample rows (no physical tests exist for them)",
+  "shows": "IC data without any physical test: every unit NO_PHYSICAL_ANCHOR, inference ABSTAIN",
+  "pages": [
+   "evidence#ic-only"
+  ],
+  "alt": "LayerProof evidence support panel for an IC-only dataset: all units have no physical anchor.",
+  "sizes": {
+   "1400": {
+    "file": "support-no-anchor-mndot-1400.webp",
+    "width": 1400,
+    "height": 1165,
+    "bytes": 93282
+   },
+   "760": {
+    "file": "support-no-anchor-mndot-760.webp",
+    "width": 760,
+    "height": 633,
+    "bytes": 34986
+   }
+  }
+ },
+ {
+  "id": "verify-candidates",
+  "src": "docs/screenshots/week7/01-sparc-candidates.png",
+  "milestone": "Verification candidate prioritization",
+  "crop": [
+   262,
+   56,
+   1706,
+   1320
+  ],
+  "data": "Real SPARC field-trial data",
+  "shows": "Verification candidates ordered by EVIDENCE_GAP_PRIORITY under the decision-support banner",
+  "pages": [
+   "index#hero",
+   "index#verify",
+   "product#verify"
+  ],
+  "alt": "LayerProof Verify page listing ranked verification candidates with support state, evidence-gap priority and reason codes.",
+  "sizes": {
+   "1400": {
+    "file": "verify-candidates-1400.webp",
+    "width": 1400,
+    "height": 1225,
+    "bytes": 94362
+   },
+   "760": {
+    "file": "verify-candidates-760.webp",
+    "width": 760,
+    "height": 665,
+    "bytes": 35306
+   }
+  }
+ },
+ {
+  "id": "verify-components",
+  "src": "docs/screenshots/week7/01-sparc-candidates.png",
+  "milestone": "Verification candidate prioritization",
+  "crop": [
+   262,
+   1340,
+   1706,
+   1810
+  ],
+  "data": "Real SPARC field-trial data",
+  "shows": "The seven visible components behind one candidate's priority, each with its weight",
+  "pages": [
+   "index#verify",
+   "product#verify"
+  ],
+  "alt": "Component breakdown of one verification candidate: seven named components with value, weight and detail.",
+  "sizes": {
+   "1400": {
+    "file": "verify-components-1400.webp",
+    "width": 1400,
+    "height": 456,
+    "bytes": 47848
+   },
+   "760": {
+    "file": "verify-components-760.webp",
+    "width": 760,
+    "height": 247,
+    "bytes": 17382
+   }
+  }
+ },
+ {
+  "id": "map-candidates",
+  "src": "docs/screenshots/week7/06-mndot-map-candidates.png",
+  "milestone": "Verification candidate prioritization",
+  "crop": [
+   262,
+   56,
+   1706,
+   1085
+  ],
+  "data": "Real MnDOT IC sample rows",
+  "shows": "Candidates drawn as neutral rings on the map with the inspector open",
+  "pages": [
+   "product#verify"
+  ],
+  "alt": "LayerProof Map page with neutral ring markers for verification candidates and an inspector panel.",
+  "sizes": {
+   "1400": {
+    "file": "map-candidates-1400.webp",
+    "width": 1400,
+    "height": 998,
+    "bytes": 73898
+   },
+   "760": {
+    "file": "map-candidates-760.webp",
+    "width": 760,
+    "height": 542,
+    "bytes": 25824
+   }
+  }
+ },
+ {
+  "id": "retro-ranking",
+  "src": "docs/screenshots/week8/02-lolo-vs-baselines.png",
+  "milestone": "Retrospective validation",
+  "crop": [
+   262,
+   706,
+   1706,
+   1250
+  ],
+  "data": "Real SPARC field-trial data (soil layer 1)",
+  "shows": "Leave-one-location-out result against the missing-anchor and random baselines: NO CLEAR RETROSPECTIVE ADVANTAGE",
+  "pages": [
+   "index#retrospective",
+   "research#retrospective"
+  ],
+  "alt": "Retrospective evaluation design and a table comparing the frozen policy with missing-anchor-only and random baselines.",
+  "sizes": {
+   "1400": {
+    "file": "retro-ranking-1400.webp",
+    "width": 1400,
+    "height": 527,
+    "bytes": 45990
+   },
+   "760": {
+    "file": "retro-ranking-760.webp",
+    "width": 760,
+    "height": 286,
+    "bytes": 17690
+   }
+  }
+ },
+ {
+  "id": "retro-folds",
+  "src": "docs/screenshots/week8/02-lolo-vs-baselines.png",
+  "milestone": "Retrospective validation",
+  "crop": [
+   262,
+   1262,
+   1706,
+   1965
+  ],
+  "data": "Real SPARC field-trial data (soil layer 1)",
+  "shows": "Each hidden location, its rank, the leakage checks and the support states before and after restoring the test",
+  "pages": [
+   "research#retrospective"
+  ],
+  "alt": "Fold table listing hidden locations with their ranks and a before and after comparison of evidence states.",
+  "sizes": {
+   "1400": {
+    "file": "retro-folds-1400.webp",
+    "width": 1400,
+    "height": 682,
+    "bytes": 40370
+   },
+   "760": {
+    "file": "retro-folds-760.webp",
+    "width": 760,
+    "height": 370,
+    "bytes": 16134
+   }
+  }
+ },
+ {
+  "id": "pilot-readiness",
+  "src": "docs/screenshots/week8/04-pilot-readiness-decision.png",
+  "milestone": "Pilot workflow",
+  "crop": [
+   255,
+   200,
+   1708,
+   950
+  ],
+  "data": "Real SPARC field-trial data in a browser-test project",
+  "shows": "Pilot readiness checklist; the status describes what a pilot needs, not construction quality",
+  "pages": [
+   "index#pilot",
+   "pilot#readiness"
+  ],
+  "alt": "Pilot readiness checklist with eleven items and their status.",
+  "sizes": {
+   "1400": {
+    "file": "pilot-readiness-1400.webp",
+    "width": 1400,
+    "height": 723,
+    "bytes": 45684
+   },
+   "760": {
+    "file": "pilot-readiness-760.webp",
+    "width": 760,
+    "height": 392,
+    "bytes": 17120
+   }
+  }
+ },
+ {
+  "id": "pilot-decisions",
+  "src": "docs/screenshots/week8/04-pilot-readiness-decision.png",
+  "milestone": "Pilot workflow",
+  "crop": [
+   255,
+   975,
+   1708,
+   1440
+  ],
+  "data": "Real SPARC field-trial data; the recorded decision was entered by the automated browser test, not by a practising engineer",
+  "shows": "Engineer review log: a decision is appended next to the ranking, which is never rewritten",
+  "pages": [
+   "pilot#decisions"
+  ],
+  "alt": "Engineer review table showing ranked candidates and the latest recorded decision for each.",
+  "sizes": {
+   "1400": {
+    "file": "pilot-decisions-1400.webp",
+    "width": 1400,
+    "height": 448,
+    "bytes": 27402
+   },
+   "760": {
+    "file": "pilot-decisions-760.webp",
+    "width": 760,
+    "height": 243,
+    "bytes": 11432
+   }
+  }
+ }
+]

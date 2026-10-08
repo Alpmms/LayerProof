@@ -1,0 +1,295 @@
+{
+ "generated_from": {
+  "week5": {
+   "file": "docs/science/sparc/table_sparc_runs.csv",
+   "sha256": "6c225e58064191ac2615510176acc41e98341c76ffd24d4627c608566c4cc529",
+   "seed": 20261005
+  },
+  "week8": {
+   "file": "docs/retro/table_retro_metrics.csv",
+   "sha256": "f4f17eb7a2ada67379b7287ae013ad88f61c931a0e451e12e227964e2b0530fe",
+   "policy": "VERIFICATION_CANDIDATES@1.0.0",
+   "random_repetitions": 1000,
+   "random_seed_base": 20261008
+  }
+ },
+ "week5": [
+  {
+   "run": "A_dry_density_UGM_layer2",
+   "target": "Dry density",
+   "layer": "UGM layer 2",
+   "unit": "kg/m³",
+   "gate": "READY",
+   "model_status": "EVALUATED",
+   "pairs": 19,
+   "locations": 13,
+   "groups": 13.0,
+   "ols_r2": -0.40238488469691003,
+   "ridge_r2": -0.24531364899085317,
+   "rf_r2": -0.4984942131703789,
+   "ols_rmse": 48.24618894229009,
+   "uncertainty": "UNRESOLVED"
+  },
+  {
+   "run": "A_dry_density_UGM_layer2_lane_blocks",
+   "target": "Dry density",
+   "layer": "UGM layer 2, held out in blocks of 3 tags",
+   "unit": "kg/m³",
+   "gate": "READY",
+   "model_status": "EVALUATED",
+   "pairs": 19,
+   "locations": 13,
+   "groups": 8.0,
+   "ols_r2": -0.6031589422970616,
+   "ridge_r2": -0.5006961939241996,
+   "rf_r2": -0.47860929418502973,
+   "ols_rmse": 51.58431800591483,
+   "uncertainty": "UNRESOLVED"
+  },
+  {
+   "run": "A_dry_density_soil_layer1",
+   "target": "Dry density",
+   "layer": "Soil layer 1",
+   "unit": "kg/m³",
+   "gate": "READY",
+   "model_status": "EVALUATED",
+   "pairs": 12,
+   "locations": 8,
+   "groups": 8.0,
+   "ols_r2": -0.08031704186316113,
+   "ridge_r2": -0.12089317794261678,
+   "rf_r2": 0.085795916373414,
+   "ols_rmse": 24.76575252876702,
+   "uncertainty": "UNRESOLVED"
+  },
+  {
+   "run": "A_dry_density_existing_layer",
+   "target": "Dry density",
+   "layer": "Existing layer",
+   "unit": "kg/m³",
+   "gate": "NOT_READY",
+   "model_status": "BLOCKED_GATE_NOT_READY",
+   "pairs": 0,
+   "locations": 0,
+   "groups": null,
+   "ols_r2": null,
+   "ridge_r2": null,
+   "rf_r2": null,
+   "ols_rmse": null,
+   "uncertainty": "NOT_ASSESSABLE"
+  },
+  {
+   "run": "C_wet_density_UGM_layer2",
+   "target": "Wet density",
+   "layer": "UGM layer 2",
+   "unit": "kg/m³",
+   "gate": "READY",
+   "model_status": "EVALUATED",
+   "pairs": 19,
+   "locations": 13,
+   "groups": 13.0,
+   "ols_r2": -0.5197367615920401,
+   "ridge_r2": -0.351655388352899,
+   "rf_r2": -0.5984355691953613,
+   "ols_rmse": 53.84338833590949,
+   "uncertainty": "UNRESOLVED"
+  },
+  {
+   "run": "B_moisture_lab_UGM_layer2",
+   "target": "Laboratory moisture",
+   "layer": "UGM layer 2",
+   "unit": "%",
+   "gate": "READY",
+   "model_status": "EVALUATED",
+   "pairs": 6,
+   "locations": 6,
+   "groups": 6.0,
+   "ols_r2": 0.8685934799956768,
+   "ridge_r2": 0.8543701642806517,
+   "rf_r2": -0.14191150422833188,
+   "ols_rmse": 0.13139770415088534,
+   "uncertainty": "UNRESOLVED"
+  }
+ ],
+ "week8": {
+  "soil_layer1": {
+   "LEAVE_ONE_LOCATION_OUT": {
+    "hidden_locations": 8,
+    "WEEK7_FROZEN": {
+     "mrr": 0.1404265873015873,
+     "hit_1": 0.0,
+     "hit_3": 0.0,
+     "hit_5": 0.125,
+     "median_rank": 7.5,
+     "mean_normalized_rank": 0.404101966873706
+    },
+    "interpretation": "NO CLEAR RETROSPECTIVE ADVANTAGE",
+    "MISSING_ANCHOR_ONLY": {
+     "mrr": 0.16909818018369024,
+     "hit_1": 0.04586834733893558,
+     "hit_3": 0.13760504201680673,
+     "hit_5": 0.22934173669467786,
+     "median_rank": 11.0,
+     "mean_normalized_rank": 0.5239518633540373
+    },
+    "RANDOM": {
+     "mrr": 0.17188764537627962,
+     "hit_1": 0.046375,
+     "hit_3": 0.146125,
+     "hit_5": 0.233625,
+     "median_rank": null,
+     "mean_normalized_rank": 0.5201833333333333
+    },
+    "share_random_at_least_week7": 0.563
+   },
+   "LEAVE_ONE_GROUP_OUT": {
+    "hidden_locations": 8,
+    "WEEK7_FROZEN": {
+     "mrr": 0.11672794117647059,
+     "hit_1": 0.0,
+     "hit_3": 0.0,
+     "hit_5": 0.125,
+     "median_rank": 9.0,
+     "mean_normalized_rank": 0.48018892339544517
+    },
+    "interpretation": "NO CLEAR RETROSPECTIVE ADVANTAGE",
+    "MISSING_ANCHOR_ONLY": {
+     "mrr": 0.16909818018369024,
+     "hit_1": 0.04586834733893558,
+     "hit_3": 0.13760504201680673,
+     "hit_5": 0.22934173669467786,
+     "median_rank": 11.0,
+     "mean_normalized_rank": 0.5239518633540373
+    },
+    "RANDOM": {
+     "mrr": 0.17073478639313416,
+     "hit_1": 0.043375,
+     "hit_3": 0.145875,
+     "hit_5": 0.238,
+     "median_rank": null,
+     "mean_normalized_rank": 0.5179521997929606
+    },
+    "share_random_at_least_week7": 0.726
+   },
+   "SEQUENTIAL_REPLAY": {
+    "hidden_locations": 8,
+    "WEEK7_FROZEN": {
+     "mrr": 0.21054983190948104,
+     "hit_1": 0.10555555555555556,
+     "hit_3": 0.15,
+     "hit_5": 0.27777777777777773,
+     "median_rank": 8.0,
+     "mean_normalized_rank": 0.5074189095928227
+    },
+    "interpretation": "LIMITED RETROSPECTIVE SIGNAL",
+    "MISSING_ANCHOR_ONLY": {
+     "mrr": 0.1661031702382264,
+     "hit_1": 0.044858523119392674,
+     "hit_3": 0.13457556935817802,
+     "hit_5": 0.22429261559696345,
+     "median_rank": 12.0,
+     "mean_normalized_rank": 0.5224292615596963
+    },
+    "RANDOM": {
+     "mrr": 0.16618057972287004,
+     "hit_1": 0.04524999999999999,
+     "hit_3": 0.13541666666666666,
+     "hit_5": 0.22175,
+     "median_rank": null,
+     "mean_normalized_rank": 0.5232796756383714
+    },
+    "share_random_at_least_week7": 0.192
+   }
+  },
+  "ugm_layer2": {
+   "LEAVE_ONE_LOCATION_OUT": {
+    "hidden_locations": 13,
+    "WEEK7_FROZEN": {
+     "mrr": 0.2087072429832611,
+     "hit_1": 0.0,
+     "hit_3": 0.46153846153846156,
+     "hit_5": 0.5384615384615384,
+     "median_rank": 4.5,
+     "mean_normalized_rank": 0.3480557903634826
+    },
+    "interpretation": "LIMITED RETROSPECTIVE SIGNAL",
+    "MISSING_ANCHOR_ONLY": {
+     "mrr": 0.1663751443120181,
+     "hit_1": 0.0450404858299595,
+     "hit_3": 0.13512145748987855,
+     "hit_5": 0.22520242914979763,
+     "median_rank": 12.5,
+     "mean_normalized_rank": 0.47936038320653707
+    },
+    "RANDOM": {
+     "mrr": 0.1566340860772007,
+     "hit_1": 0.04338461538461539,
+     "hit_3": 0.12284615384615384,
+     "hit_5": 0.20569230769230767,
+     "median_rank": null,
+     "mean_normalized_rank": 0.5222867004790082
+    },
+    "share_random_at_least_week7": 0.163
+   },
+   "LEAVE_ONE_GROUP_OUT": {
+    "hidden_locations": 13,
+    "WEEK7_FROZEN": {
+     "mrr": 0.16960467888069697,
+     "hit_1": 0.0,
+     "hit_3": 0.15384615384615385,
+     "hit_5": 0.46153846153846156,
+     "median_rank": 6.0,
+     "mean_normalized_rank": 0.39327979712595096
+    },
+    "interpretation": "NO CLEAR RETROSPECTIVE ADVANTAGE",
+    "MISSING_ANCHOR_ONLY": {
+     "mrr": 0.1708969210981624,
+     "hit_1": 0.04672739541160593,
+     "hit_3": 0.14018218623481782,
+     "hit_5": 0.23363697705802972,
+     "median_rank": 12.5,
+     "mean_normalized_rank": 0.4786559594251902
+    },
+    "RANDOM": {
+     "mrr": 0.15807051208635267,
+     "hit_1": 0.040846153846153845,
+     "hit_3": 0.12323076923076923,
+     "hit_5": 0.215,
+     "median_rank": null,
+     "mean_normalized_rank": 0.5213675683291068
+    },
+    "share_random_at_least_week7": 0.374
+   },
+   "SEQUENTIAL_REPLAY": {
+    "hidden_locations": 13,
+    "WEEK7_FROZEN": {
+     "mrr": 0.119250449051144,
+     "hit_1": 0.0110803324099723,
+     "hit_3": 0.08587257617728532,
+     "hit_5": 0.16066481994459833,
+     "median_rank": 10.0,
+     "mean_normalized_rank": 0.5687054173896279
+    },
+    "interpretation": "NO CLEAR RETROSPECTIVE ADVANTAGE",
+    "MISSING_ANCHOR_ONLY": {
+     "mrr": 0.1580369473775203,
+     "hit_1": 0.04195488721804512,
+     "hit_3": 0.12586466165413535,
+     "hit_5": 0.20977443609022559,
+     "median_rank": 13.0,
+     "mean_normalized_rank": 0.5093984962406015
+    },
+    "RANDOM": {
+     "mrr": 0.1535276875010716,
+     "hit_1": 0.03952631578947369,
+     "hit_3": 0.11905263157894735,
+     "hit_5": 0.2032631578947368,
+     "median_rank": null,
+     "mean_normalized_rank": 0.5204446211683053
+    },
+    "share_random_at_least_week7": 0.783
+   }
+  }
+ },
+ "week8_overall": "NO CLEAR RETROSPECTIVE ADVANTAGE"
+}

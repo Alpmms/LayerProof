@@ -1,0 +1,2242 @@
+{
+ "title": "External spatial benchmark — NCHRP 933 / MnROAD",
+ "protocol": "NCHRP933_SPATIAL_1.0.0",
+ "frozen": "2026-10-07",
+ "label": "RETROSPECTIVE EXTERNAL SPATIAL BENCHMARK",
+ "interpretation": "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE",
+ "not_a_milestone": "This is not a LayerProof milestone and not a prospective pilot. Accepted results are unchanged.",
+ "source": {
+  "citation": "NCHRP Research Report 933 (Project 24-45), Appendix F, \"Field Study for Implementation and Evaluation of NDT and IC for Quality Acceptance and Design Modulus Verification\", MnROAD field study, Figures F-24 to F-27",
+  "organization": "National Cooperative Highway Research Program, Transportation Research Board",
+  "pdf_sha256": "fac13b18df385a2c7851454aa3d3a4c2991480a9fcab4d6edc32cadcbaf88747",
+  "pdf_pages": "179–182 (report pages F-30 to F-33)",
+  "field_work": "MnROAD low-volume road, cells 185, 186, 188 and 189, July–August 2017; proof mapping with an instrumented CAT CS74B roller",
+  "redistribution": "The report is a copyrighted publication. Its tables and figures are not reproduced; only derived statistics and original graphics are shown.",
+  "no_endorsement": "No endorsement by NCHRP, TRB, MnDOT, MnROAD or the report's authors is implied."
+ },
+ "evidence_class": "PUBLISHED_AGGREGATED_REAL",
+ "evidence_class_reason": "A real field study, but the benchmark input is reconstructed from matrices printed in the published report: buffer-averaged CMV and spot-test moduli, not raw roller or test files.",
+ "spatial_reference": "SOURCE_DEFINED_LOCAL_GRID",
+ "grid": "Four lines A–D, 2.1 m apart, and nine chainages 0–60 m at 7.5 m: 36 nominal positions per stratum. Local coordinates with an arbitrary origin; not GPS, not a coordinate reference system.",
+ "measurements": {
+  "CMV": "roller compaction meter value, averaged over a rectangular buffer around each test position (unitless)",
+  "LWD": "light weight deflectometer modulus, ksi",
+  "FWD": "falling weight deflectometer modulus, ksi"
+ },
+ "totals": {
+  "nominal_positions": 288,
+  "cmv": 278,
+  "lwd_exact_position": 216,
+  "fwd_exact_position": 209,
+  "lwd_merged_cells": 24,
+  "fwd_merged_cells": 24,
+  "cmv_lwd_pairs": 214,
+  "cmv_fwd_pairs": 208,
+  "cmv_lwd_fwd_triplets": 204
+ },
+ "strata": [
+  {
+   "stratum": "185_SG",
+   "name": "Cell 185, sandy subgrade",
+   "nominal_positions": 36,
+   "cmv": 32,
+   "lwd_exact_position": 0,
+   "fwd_exact_position": 4,
+   "lwd_merged_cells": 12,
+   "fwd_merged_cells": 12,
+   "cmv_lwd_pairs": 0,
+   "cmv_fwd_pairs": 4,
+   "cmv_lwd_fwd_triplets": 0,
+   "evaluable": {
+    "LWD": false,
+    "FWD": false
+   }
+  },
+  {
+   "stratum": "186_SG",
+   "name": "Cell 186, sandy subgrade",
+   "nominal_positions": 36,
+   "cmv": 36,
+   "lwd_exact_position": 4,
+   "fwd_exact_position": 4,
+   "lwd_merged_cells": 12,
+   "fwd_merged_cells": 12,
+   "cmv_lwd_pairs": 4,
+   "cmv_fwd_pairs": 4,
+   "cmv_lwd_fwd_triplets": 4,
+   "evaluable": {
+    "LWD": false,
+    "FWD": false
+   }
+  },
+  {
+   "stratum": "188_SG",
+   "name": "Cell 188, clayey subgrade",
+   "nominal_positions": 36,
+   "cmv": 36,
+   "lwd_exact_position": 36,
+   "fwd_exact_position": 36,
+   "lwd_merged_cells": 0,
+   "fwd_merged_cells": 0,
+   "cmv_lwd_pairs": 36,
+   "cmv_fwd_pairs": 36,
+   "cmv_lwd_fwd_triplets": 36,
+   "evaluable": {
+    "LWD": true,
+    "FWD": true
+   }
+  },
+  {
+   "stratum": "189_SG",
+   "name": "Cell 189, clayey subgrade",
+   "nominal_positions": 36,
+   "cmv": 36,
+   "lwd_exact_position": 36,
+   "fwd_exact_position": 33,
+   "lwd_merged_cells": 0,
+   "fwd_merged_cells": 0,
+   "cmv_lwd_pairs": 36,
+   "cmv_fwd_pairs": 33,
+   "cmv_lwd_fwd_triplets": 33,
+   "evaluable": {
+    "LWD": true,
+    "FWD": true
+   }
+  },
+  {
+   "stratum": "185_BASE",
+   "name": "Cell 185, coarse RCA base on sandy subgrade",
+   "nominal_positions": 36,
+   "cmv": 32,
+   "lwd_exact_position": 32,
+   "fwd_exact_position": 31,
+   "lwd_merged_cells": 0,
+   "fwd_merged_cells": 0,
+   "cmv_lwd_pairs": 32,
+   "cmv_fwd_pairs": 31,
+   "cmv_lwd_fwd_triplets": 31,
+   "evaluable": {
+    "LWD": true,
+    "FWD": true
+   }
+  },
+  {
+   "stratum": "186_BASE",
+   "name": "Cell 186, fine RCA base on sandy subgrade",
+   "nominal_positions": 36,
+   "cmv": 35,
+   "lwd_exact_position": 36,
+   "fwd_exact_position": 32,
+   "lwd_merged_cells": 0,
+   "fwd_merged_cells": 0,
+   "cmv_lwd_pairs": 35,
+   "cmv_fwd_pairs": 32,
+   "cmv_lwd_fwd_triplets": 32,
+   "evaluable": {
+    "LWD": true,
+    "FWD": true
+   }
+  },
+  {
+   "stratum": "188_BASE",
+   "name": "Cell 188, limestone aggregate base on clayey subgrade",
+   "nominal_positions": 36,
+   "cmv": 36,
+   "lwd_exact_position": 36,
+   "fwd_exact_position": 34,
+   "lwd_merged_cells": 0,
+   "fwd_merged_cells": 0,
+   "cmv_lwd_pairs": 36,
+   "cmv_fwd_pairs": 34,
+   "cmv_lwd_fwd_triplets": 34,
+   "evaluable": {
+    "LWD": true,
+    "FWD": true
+   }
+  },
+  {
+   "stratum": "189_BASE",
+   "name": "Cell 189, recycled aggregate base on clayey subgrade",
+   "nominal_positions": 36,
+   "cmv": 35,
+   "lwd_exact_position": 36,
+   "fwd_exact_position": 35,
+   "lwd_merged_cells": 0,
+   "fwd_merged_cells": 0,
+   "cmv_lwd_pairs": 35,
+   "cmv_fwd_pairs": 34,
+   "cmv_lwd_fwd_triplets": 34,
+   "evaluable": {
+    "LWD": true,
+    "FWD": true
+   }
+  }
+ ],
+ "not_evaluable": "Cells 185 and 186 on sandy subgrade: most LWD and FWD values are printed in source cells that span two chainages, so their position is not exact. They are counted, not used.",
+ "design": {
+  "question": "When tests are added one at a time, does the frozen LayerProof priority reduce the error in reconstructing the still-hidden physical values faster than reasonable alternatives?",
+  "steps": [
+   "Four tests are visible at the start, one per line, at seeded random chainages.",
+   "Every other LWD or FWD value is hidden from the ranking.",
+   "The frozen priority (VERIFICATION_CANDIDATES@1.0.0, default weights) picks the next position.",
+   "The published value at that position is revealed and becomes a visible test.",
+   "Repeat for 15 additional tests; 100 replicated starting configurations per stratum and modality."
+  ],
+  "reconstruction": "Each hidden value is predicted by the value at the nearest test taken so far. No model is fitted.",
+  "summary_metric": "Area under the curve of normalized mean absolute error (MAE / SD) over the 15 steps. Lower is better.",
+  "baselines": {
+   "RANDOM": "uniform random choice (mean of 20 seeded orders)",
+   "SPATIAL_MAXIMIN": "the position farthest from the tests taken so far",
+   "MISSING_ANCHOR_ONLY": "the Week-8 missing-anchor score; identical for every candidate here, so it reduces to random choice"
+  },
+  "modalities_separate": true,
+  "replicates": 100,
+  "seed_base": 20261009,
+  "initial_anchors": 4,
+  "horizon": 15,
+  "declared_before_outcomes": true
+ },
+ "frozen_policy": {
+  "policy": "VERIFICATION_CANDIDATES@1.0.0",
+  "weights": "equal, unchanged",
+  "config_sha256": "22eea83c6af75cb9bec570d6de5079e28d862d848f94e1ddc60298b81535c336",
+  "location_mode": "source-defined tags (the application's mode for a source-defined spatial reference)",
+  "components": {
+   "no_direct_anchor": "active (1 for every candidate)",
+   "support_state_gap": "active",
+   "separation": "active, in tag steps",
+   "context_gap": "constant 0 (one pass, one layer per stratum)",
+   "domain_gap": "active (CMV outside the range seen at tested positions)",
+   "ic_coverage": "constant (the number of roller records per buffer is not in the extracted figures)",
+   "coverage_benefit": "active"
+  },
+  "ties": "70% of decisions in the first cell had tied top priorities, resolved by candidate key as in the frozen code",
+  "diversity": "no effect on a one-at-a-time sequence (verified)"
+ },
+ "cells": [
+  {
+   "stratum": "188_SG",
+   "name": "Cell 188, clayey subgrade",
+   "modality": "LWD",
+   "cell": 188,
+   "layer": "SUBGRADE",
+   "values": 36,
+   "pool": 36,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.004128259,
+    "RANDOM": 1.002470832,
+    "SPATIAL_MAXIMIN": 1.037487908,
+    "WEEK7_FROZEN": 0.964449858
+   },
+   "vs_random": {
+    "median_delta": 0.03982588087,
+    "ci95_median_delta": [
+     0.01643397723,
+     0.05706504518
+    ],
+    "week7_lower_auc_share": 0.68,
+    "favourable": true
+   },
+   "vs_maximin": {
+    "median_delta": 0.06039803594,
+    "ci95_median_delta": [
+     0.04868437495,
+     0.07915374582
+    ],
+    "week7_lower_auc_share": 0.82,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": 0.04345250257,
+    "week7_lower_auc_share": 0.73
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.057909095,
+     1.038037533,
+     1.019095952,
+     1.009499032,
+     1.002540558,
+     0.9972521462,
+     0.993686257,
+     0.9919518226,
+     0.994107821,
+     0.9973980277,
+     0.9973256091,
+     0.9968298705,
+     0.9978634955,
+     0.9985676967,
+     0.9983669082,
+     1.000893209
+    ],
+    "RANDOM": [
+     1.057909095,
+     1.028539316,
+     1.017472046,
+     1.010630271,
+     1.004213095,
+     0.9960121451,
+     0.998274069,
+     0.9981302632,
+     0.9940683861,
+     0.9921008553,
+     0.9918988355,
+     0.9927108685,
+     0.9953130723,
+     0.9954648103,
+     0.9950880902,
+     0.9963836121
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.057909095,
+     1.042566422,
+     1.013297073,
+     1.019518857,
+     1.027220108,
+     1.027629434,
+     1.046290371,
+     1.056220636,
+     1.054975642,
+     1.055218665,
+     1.057895341,
+     1.048444716,
+     1.032975584,
+     1.020061312,
+     1.022085665,
+     1.017928498
+    ],
+    "WEEK7_FROZEN": [
+     1.057909095,
+     0.9775255932,
+     0.9249494227,
+     0.914933617,
+     0.9175212102,
+     0.9447543248,
+     0.9449947502,
+     0.9565403871,
+     0.9635090613,
+     0.9760713449,
+     0.9908668163,
+     0.9928159749,
+     0.9837540904,
+     0.9766049763,
+     0.9794315198,
+     0.9870404676
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9912083333,
+    "RANDOM": 0.9917222222,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": 0.007563572919,
+     "10": 0.02102148869,
+     "3": 0.02245613818,
+     "5": 0.02910482595
+    },
+    "RANDOM": {
+     "1": 0.01572061811,
+     "10": 0.02575072289,
+     "3": 0.02126124322,
+     "5": 0.02911301126
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": 0.004253821351,
+     "10": -0.03615375569,
+     "3": 0.01326736932,
+     "5": -0.00398343416
+    },
+    "WEEK7_FROZEN": {
+     "1": 0.06548186156,
+     "10": 0.02604476983,
+     "3": 0.112784828,
+     "5": 0.08058686474
+    }
+   },
+   "random_error_change_over_horizon": -0.05815762733375502,
+   "tied_top_share": 0.6707070707
+  },
+  {
+   "stratum": "188_SG",
+   "name": "Cell 188, clayey subgrade",
+   "modality": "FWD",
+   "cell": 188,
+   "layer": "SUBGRADE",
+   "values": 36,
+   "pool": 36,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 0.9393529638,
+    "RANDOM": 0.9365189419,
+    "SPATIAL_MAXIMIN": 0.944332509,
+    "WEEK7_FROZEN": 0.9318143634
+   },
+   "vs_random": {
+    "median_delta": 0.004629314727,
+    "ci95_median_delta": [
+     -0.01117425741,
+     0.02155447351
+    ],
+    "week7_lower_auc_share": 0.53,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": 0.008639740307,
+    "ci95_median_delta": [
+     -0.01081896254,
+     0.02125353201
+    ],
+    "week7_lower_auc_share": 0.54,
+    "favourable": false
+   },
+   "vs_missing_anchor": {
+    "median_delta": 0.002437993877,
+    "week7_lower_auc_share": 0.51
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     0.9586387872,
+     0.9485669727,
+     0.942617461,
+     0.9405647424,
+     0.9324989564,
+     0.9335143701,
+     0.933135397,
+     0.9313685969,
+     0.9321645886,
+     0.9328020388,
+     0.9359193221,
+     0.9396229168,
+     0.9432529548,
+     0.9461492591,
+     0.9452211553,
+     0.9471526615
+    ],
+    "RANDOM": [
+     0.9586387872,
+     0.9461644986,
+     0.9395512583,
+     0.9344762632,
+     0.9303442712,
+     0.9299045172,
+     0.9277952228,
+     0.9303015882,
+     0.9284085046,
+     0.9320827627,
+     0.9346639471,
+     0.9391048504,
+     0.9425416541,
+     0.940969532,
+     0.9409394863,
+     0.9424327553
+    ],
+    "SPATIAL_MAXIMIN": [
+     0.9586387872,
+     0.9255164281,
+     0.9228087601,
+     0.9299474785,
+     0.9448002948,
+     0.9447634813,
+     0.9505359696,
+     0.9560434306,
+     0.9597672655,
+     0.9630948861,
+     0.9663800051,
+     0.949704401,
+     0.9213213729,
+     0.9221276126,
+     0.9467526274,
+     0.9642084558
+    ],
+    "WEEK7_FROZEN": [
+     0.9586387872,
+     0.9253086786,
+     0.9157245035,
+     0.9081680689,
+     0.9241241887,
+     0.9361339095,
+     0.9298529127,
+     0.9326101818,
+     0.9287448918,
+     0.93504387,
+     0.9350465974,
+     0.9364296345,
+     0.9466452902,
+     0.9348022823,
+     0.9396990386,
+     0.9391240178
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9912083333,
+    "RANDOM": 0.9917222222,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.001863995175,
+     "10": -0.00946406727,
+     "3": -0.003992755184,
+     "5": -0.001784034874
+    },
+    "RANDOM": {
+     "1": -0.0003637437062,
+     "10": -0.008497938317,
+     "3": 0.001667800628,
+     "5": 0.001511664921
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": 0.01962755022,
+     "10": -0.03988810282,
+     "3": 0.005767950084,
+     "5": -0.017985727
+    },
+    "WEEK7_FROZEN": {
+     "1": 0.0211696254,
+     "10": -0.01040054527,
+     "3": 0.02789913193,
+     "5": -0.008691497962
+    }
+   },
+   "random_error_change_over_horizon": -0.016905253695539097,
+   "tied_top_share": 0.6707070707
+  },
+  {
+   "stratum": "189_SG",
+   "name": "Cell 189, clayey subgrade",
+   "modality": "LWD",
+   "cell": 189,
+   "layer": "SUBGRADE",
+   "values": 36,
+   "pool": 36,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.039628779,
+    "RANDOM": 1.040550675,
+    "SPATIAL_MAXIMIN": 1.149045664,
+    "WEEK7_FROZEN": 1.069790299
+   },
+   "vs_random": {
+    "median_delta": -0.04112394274,
+    "ci95_median_delta": [
+     -0.05705302567,
+     -0.02139851268
+    ],
+    "week7_lower_auc_share": 0.3,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": 0.06369765839,
+    "ci95_median_delta": [
+     0.05510533409,
+     0.08350996869
+    ],
+    "week7_lower_auc_share": 0.86,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.04115611301,
+    "week7_lower_auc_share": 0.31
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.093997358,
+     1.068234821,
+     1.043088499,
+     1.032463068,
+     1.025078098,
+     1.019575782,
+     1.020219147,
+     1.023236238,
+     1.025390271,
+     1.030459643,
+     1.033938303,
+     1.038253137,
+     1.044833253,
+     1.052829944,
+     1.058038879,
+     1.063587865
+    ],
+    "RANDOM": [
+     1.093997358,
+     1.063825072,
+     1.05140359,
+     1.038349005,
+     1.027630049,
+     1.024453883,
+     1.026173027,
+     1.024277718,
+     1.025481839,
+     1.030031371,
+     1.034118997,
+     1.038178022,
+     1.043468404,
+     1.049293049,
+     1.053816585,
+     1.061521664
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.093997358,
+     1.033685278,
+     1.011778003,
+     1.052341999,
+     1.086765244,
+     1.103176523,
+     1.133412373,
+     1.144102535,
+     1.1486023,
+     1.152907315,
+     1.177262472,
+     1.21758339,
+     1.255841646,
+     1.271215786,
+     1.267835809,
+     1.264351205
+    ],
+    "WEEK7_FROZEN": [
+     1.093997358,
+     1.031514432,
+     1.021349892,
+     0.9938968916,
+     0.9973741232,
+     1.030631297,
+     1.049677125,
+     1.061374063,
+     1.07196614,
+     1.089692078,
+     1.09441857,
+     1.095325527,
+     1.122562854,
+     1.145048826,
+     1.13151778,
+     1.127012404
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9912083333,
+    "RANDOM": 0.9917222222,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": 0.007620236438,
+     "10": 0.002918959003,
+     "3": 0.02111017219,
+     "5": 0.0244214235
+    },
+    "RANDOM": {
+     "1": 0.009867595355,
+     "10": 0.004702137917,
+     "3": 0.01774491044,
+     "5": 0.02252173438
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": 0.02619383232,
+     "10": -0.1349989478,
+     "3": -0.002101936141,
+     "5": -0.05830846937
+    },
+    "WEEK7_FROZEN": {
+     "1": 0.03551040971,
+     "10": -0.05745399927,
+     "3": 0.05270759588,
+     "5": 0.01008648642
+    }
+   },
+   "random_error_change_over_horizon": -0.029685349569189678,
+   "tied_top_share": 0.6774410774
+  },
+  {
+   "stratum": "189_SG",
+   "name": "Cell 189, clayey subgrade",
+   "modality": "FWD",
+   "cell": 189,
+   "layer": "SUBGRADE",
+   "values": 33,
+   "pool": 33,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.102322364,
+    "RANDOM": 1.10599986,
+    "SPATIAL_MAXIMIN": 1.230145601,
+    "WEEK7_FROZEN": 1.182664516
+   },
+   "vs_random": {
+    "median_delta": -0.07487603103,
+    "ci95_median_delta": [
+     -0.1037949221,
+     -0.05352756716
+    ],
+    "week7_lower_auc_share": 0.21,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": 0.02857362262,
+    "ci95_median_delta": [
+     0.01660940159,
+     0.05091504672
+    ],
+    "week7_lower_auc_share": 0.66,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.07781867126,
+    "week7_lower_auc_share": 0.18
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.078588049,
+     1.077054888,
+     1.078844702,
+     1.084979275,
+     1.086923954,
+     1.087833222,
+     1.095656818,
+     1.100444597,
+     1.102714116,
+     1.108420361,
+     1.114201577,
+     1.118603756,
+     1.123595895,
+     1.124156605,
+     1.127315565,
+     1.129592205
+    ],
+    "RANDOM": [
+     1.078588049,
+     1.079629785,
+     1.083243458,
+     1.086312949,
+     1.089543464,
+     1.094804898,
+     1.100259309,
+     1.104564886,
+     1.107025481,
+     1.110016163,
+     1.114285177,
+     1.122974094,
+     1.128521829,
+     1.129964185,
+     1.131553087,
+     1.136010216
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.078588049,
+     1.141223469,
+     1.152540679,
+     1.197676826,
+     1.242676324,
+     1.263763427,
+     1.267042838,
+     1.242254383,
+     1.202490243,
+     1.231035252,
+     1.244051329,
+     1.245501339,
+     1.264700418,
+     1.281857253,
+     1.293871194,
+     1.284410035
+    ],
+    "WEEK7_FROZEN": [
+     1.078588049,
+     1.179068105,
+     1.233067364,
+     1.231391451,
+     1.229409164,
+     1.226655941,
+     1.233355226,
+     1.214353404,
+     1.188260044,
+     1.198836543,
+     1.201372879,
+     1.181785945,
+     1.139180564,
+     1.094076321,
+     1.095402229,
+     1.108917072
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9915,
+    "RANDOM": 0.9905833333,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.008645120726,
+     "10": -0.0709023134,
+     "3": -0.02818889012,
+     "5": -0.03684391833
+    },
+    "RANDOM": {
+     "1": -0.01134504201,
+     "10": -0.06872095451,
+     "3": -0.0290037419,
+     "5": -0.04237576638
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.07225107479,
+     "10": -0.1940952531,
+     "3": -0.130174993,
+     "5": -0.2014669707
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.110470916,
+     "10": -0.1517060407,
+     "3": -0.1729104607,
+     "5": -0.1696671107
+    }
+   },
+   "random_error_change_over_horizon": 0.05323827484760137,
+   "tied_top_share": 0.6298611111
+  },
+  {
+   "stratum": "185_BASE",
+   "name": "Cell 185, coarse RCA base on sandy subgrade",
+   "modality": "LWD",
+   "cell": 185,
+   "layer": "BASE",
+   "values": 32,
+   "pool": 32,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.073746796,
+    "RANDOM": 1.074471679,
+    "SPATIAL_MAXIMIN": 1.082208967,
+    "WEEK7_FROZEN": 1.096728077
+   },
+   "vs_random": {
+    "median_delta": -0.01152518724,
+    "ci95_median_delta": [
+     -0.04453393648,
+     0.01603117885
+    ],
+    "week7_lower_auc_share": 0.44,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": -0.005111750955,
+    "ci95_median_delta": [
+     -0.03480736678,
+     0.01096878429
+    ],
+    "week7_lower_auc_share": 0.46,
+    "favourable": false
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.0129437164,
+    "week7_lower_auc_share": 0.44
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.059343805,
+     1.066589839,
+     1.070076247,
+     1.074536775,
+     1.076274772,
+     1.07361341,
+     1.072993531,
+     1.074008912,
+     1.075619748,
+     1.07529423,
+     1.074835282,
+     1.074366841,
+     1.074208699,
+     1.075594531,
+     1.078527288,
+     1.079979872
+    ],
+    "RANDOM": [
+     1.059343805,
+     1.069931615,
+     1.072284873,
+     1.076029854,
+     1.07720656,
+     1.076254258,
+     1.075162091,
+     1.07405946,
+     1.070528286,
+     1.072725937,
+     1.073032439,
+     1.075960497,
+     1.07646316,
+     1.077297164,
+     1.080487056,
+     1.079960068
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.059343805,
+     1.075517867,
+     1.050012761,
+     1.029704495,
+     1.022959712,
+     1.027745154,
+     1.056939524,
+     1.084817669,
+     1.092193886,
+     1.110127739,
+     1.137104538,
+     1.136080932,
+     1.122512141,
+     1.103014903,
+     1.105447991,
+     1.098566574
+    ],
+    "WEEK7_FROZEN": [
+     1.059343805,
+     1.083421944,
+     1.124677654,
+     1.148574076,
+     1.146881213,
+     1.138889786,
+     1.128630739,
+     1.114505113,
+     1.096059667,
+     1.075630901,
+     1.064568343,
+     1.064170706,
+     1.06375307,
+     1.069902275,
+     1.074146033,
+     1.054875455
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.951875,
+    "RANDOM": 0.9530277778,
+    "SPATIAL_MAXIMIN": 0.9475,
+    "WEEK7_FROZEN": 0.9530555556
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.01754583629,
+     "10": -0.05354766996,
+     "3": -0.03873438644,
+     "5": -0.04414090952
+    },
+    "RANDOM": {
+     "1": -0.02192539398,
+     "10": -0.05149480557,
+     "3": -0.04058913956,
+     "5": -0.04675332383
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.02558044696,
+     "10": -0.1094531161,
+     "3": 0.009875439052,
+     "5": 0.003830194076
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.03635861699,
+     "10": -0.04255252246,
+     "3": -0.1115824403,
+     "5": -0.108923289
+    }
+   },
+   "random_error_change_over_horizon": 0.01946135230384454,
+   "tied_top_share": 0.7023569024
+  },
+  {
+   "stratum": "185_BASE",
+   "name": "Cell 185, coarse RCA base on sandy subgrade",
+   "modality": "FWD",
+   "cell": 185,
+   "layer": "BASE",
+   "values": 31,
+   "pool": 31,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.144751121,
+    "RANDOM": 1.14594595,
+    "SPATIAL_MAXIMIN": 1.176614147,
+    "WEEK7_FROZEN": 1.121013165
+   },
+   "vs_random": {
+    "median_delta": 0.0317821802,
+    "ci95_median_delta": [
+     0.005383224137,
+     0.04935893049
+    ],
+    "week7_lower_auc_share": 0.65,
+    "favourable": true
+   },
+   "vs_maximin": {
+    "median_delta": 0.06093574062,
+    "ci95_median_delta": [
+     0.02718328989,
+     0.07339812487
+    ],
+    "week7_lower_auc_share": 0.69,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": 0.0268357328,
+    "week7_lower_auc_share": 0.66
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.198901541,
+     1.184776842,
+     1.177457944,
+     1.168888578,
+     1.162235918,
+     1.158328508,
+     1.153330975,
+     1.144688647,
+     1.143094807,
+     1.134767652,
+     1.128165875,
+     1.122869254,
+     1.116258058,
+     1.114621291,
+     1.109717499,
+     1.105228383
+    ],
+    "RANDOM": [
+     1.198901541,
+     1.186232119,
+     1.18283496,
+     1.172890867,
+     1.16512242,
+     1.156055732,
+     1.154033853,
+     1.145649113,
+     1.13739882,
+     1.135272402,
+     1.129695812,
+     1.126251298,
+     1.116926334,
+     1.114232078,
+     1.111740165,
+     1.110805006
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.198901541,
+     1.193521282,
+     1.169388733,
+     1.158166156,
+     1.163083169,
+     1.171869409,
+     1.199383575,
+     1.239616807,
+     1.259218452,
+     1.268505271,
+     1.255384456,
+     1.204540647,
+     1.1526989,
+     1.104842789,
+     1.025778514,
+     0.967526546
+    ],
+    "WEEK7_FROZEN": [
+     1.198901541,
+     1.203662727,
+     1.170659276,
+     1.142359124,
+     1.133576036,
+     1.141652327,
+     1.122955433,
+     1.096365065,
+     1.091048461,
+     1.087370923,
+     1.078628707,
+     1.070849543,
+     1.082034907,
+     1.112104934,
+     1.122280699,
+     1.120397069
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9535138889,
+    "RANDOM": 0.953875,
+    "SPATIAL_MAXIMIN": 0.9494444444,
+    "WEEK7_FROZEN": 0.9525
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": 0.003724444271,
+     "10": 0.03124481934,
+     "3": 0.008102728112,
+     "5": 0.01216646055
+    },
+    "RANDOM": {
+     "1": 0.001796671693,
+     "10": 0.03069141416,
+     "3": 0.005078903738,
+     "5": 0.01446926947
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.008462924669,
+     "10": -0.07005553938,
+     "3": 0.0161212253,
+     "5": 0.001167640559
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.01301653832,
+     "10": 0.07301058547,
+     "3": 0.02872394801,
+     "5": 0.02226506497
+    }
+   },
+   "random_error_change_over_horizon": -0.07348104242698593,
+   "tied_top_share": 0.706122449
+  },
+  {
+   "stratum": "186_BASE",
+   "name": "Cell 186, fine RCA base on sandy subgrade",
+   "modality": "LWD",
+   "cell": 186,
+   "layer": "BASE",
+   "values": 36,
+   "pool": 35,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.208988668,
+    "RANDOM": 1.212759713,
+    "SPATIAL_MAXIMIN": 1.217358089,
+    "WEEK7_FROZEN": 1.251624105
+   },
+   "vs_random": {
+    "median_delta": -0.03283225394,
+    "ci95_median_delta": [
+     -0.04742569629,
+     -0.01443504604
+    ],
+    "week7_lower_auc_share": 0.3,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": -0.03836474201,
+    "ci95_median_delta": [
+     -0.05987920563,
+     -0.0144469413
+    ],
+    "week7_lower_auc_share": 0.34,
+    "favourable": false
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.03364629473,
+    "week7_lower_auc_share": 0.27
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.170521903,
+     1.171958695,
+     1.178652142,
+     1.185122241,
+     1.1885483,
+     1.194609308,
+     1.196870572,
+     1.206317135,
+     1.211284128,
+     1.216422534,
+     1.225288815,
+     1.232216393,
+     1.236501032,
+     1.239835071,
+     1.242876529,
+     1.246132359
+    ],
+    "RANDOM": [
+     1.170521903,
+     1.176254485,
+     1.183955128,
+     1.191745799,
+     1.196170904,
+     1.201865854,
+     1.20699015,
+     1.214112216,
+     1.218825311,
+     1.222223745,
+     1.225456918,
+     1.233228434,
+     1.234056792,
+     1.237045443,
+     1.241483178,
+     1.245440777
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.170521903,
+     1.162645073,
+     1.157451506,
+     1.143992033,
+     1.136723129,
+     1.138773016,
+     1.150769719,
+     1.171917227,
+     1.201690602,
+     1.229250219,
+     1.265217195,
+     1.292612764,
+     1.301527335,
+     1.318928087,
+     1.340092543,
+     1.327039879
+    ],
+    "WEEK7_FROZEN": [
+     1.170521903,
+     1.220450168,
+     1.292203641,
+     1.28038363,
+     1.278816404,
+     1.284071428,
+     1.276314106,
+     1.268142913,
+     1.249385709,
+     1.235569622,
+     1.235443234,
+     1.247947626,
+     1.257826558,
+     1.241512078,
+     1.213372135,
+     1.215322751
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9907083333,
+    "RANDOM": 0.990875,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.01344617158,
+     "10": -0.09190167811,
+     "3": -0.03754074396,
+     "5": -0.05368529847
+    },
+    "RANDOM": {
+     "1": -0.01628230435,
+     "10": -0.09238493449,
+     "3": -0.04396513358,
+     "5": -0.06106758253
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.005036447797,
+     "10": -0.1256119785,
+     "3": 0.002536268656,
+     "5": -0.006155041431
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.06223722209,
+     "10": -0.105443155,
+     "3": -0.134917256,
+     "5": -0.1421997912
+    }
+   },
+   "random_error_change_over_horizon": 0.06400467501546613,
+   "tied_top_share": 0.668707483
+  },
+  {
+   "stratum": "186_BASE",
+   "name": "Cell 186, fine RCA base on sandy subgrade",
+   "modality": "FWD",
+   "cell": 186,
+   "layer": "BASE",
+   "values": 32,
+   "pool": 32,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.144178982,
+    "RANDOM": 1.138140262,
+    "SPATIAL_MAXIMIN": 1.196639245,
+    "WEEK7_FROZEN": 1.219776231
+   },
+   "vs_random": {
+    "median_delta": -0.07411387885,
+    "ci95_median_delta": [
+     -0.09631726189,
+     -0.05220533277
+    ],
+    "week7_lower_auc_share": 0.19,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": -0.0221688505,
+    "ci95_median_delta": [
+     -0.03818715619,
+     0.006011085206
+    ],
+    "week7_lower_auc_share": 0.41,
+    "favourable": false
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.07801107418,
+    "week7_lower_auc_share": 0.21
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.107367882,
+     1.112160349,
+     1.116882728,
+     1.121441207,
+     1.128885057,
+     1.133989791,
+     1.139652173,
+     1.149098513,
+     1.151784272,
+     1.155300952,
+     1.159196512,
+     1.161207209,
+     1.163865751,
+     1.166497508,
+     1.166564101,
+     1.164949329
+    ],
+    "RANDOM": [
+     1.107367882,
+     1.109598299,
+     1.110233597,
+     1.114499271,
+     1.122268333,
+     1.126945478,
+     1.131234701,
+     1.136737055,
+     1.143775577,
+     1.145728579,
+     1.150073443,
+     1.156724518,
+     1.160561202,
+     1.164672555,
+     1.164095731,
+     1.162543301
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.107367882,
+     1.14201027,
+     1.137437787,
+     1.16068206,
+     1.193564758,
+     1.234399095,
+     1.255238359,
+     1.25148322,
+     1.24140495,
+     1.231421622,
+     1.229987559,
+     1.224940008,
+     1.209539447,
+     1.170369051,
+     1.143511093,
+     1.139830911
+    ],
+    "WEEK7_FROZEN": [
+     1.107367882,
+     1.164241819,
+     1.220704427,
+     1.221854065,
+     1.214228915,
+     1.219042705,
+     1.222519533,
+     1.228215619,
+     1.231431254,
+     1.234792741,
+     1.237409371,
+     1.234413136,
+     1.227153544,
+     1.236494353,
+     1.241548739,
+     1.217818601
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9918611111,
+    "RANDOM": 0.9916388889,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.01221627957,
+     "10": -0.07433873844,
+     "3": -0.02847915125,
+     "5": -0.04482381265
+    },
+    "RANDOM": {
+     "1": -0.009409987949,
+     "10": -0.06644540249,
+     "3": -0.02258200557,
+     "5": -0.03824715888
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.03755536249,
+     "10": -0.1396492562,
+     "3": -0.06322465515,
+     "5": -0.1362273842
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.06057215834,
+     "10": -0.1469135627,
+     "3": -0.1238814971,
+     "5": -0.1251396684
+    }
+   },
+   "random_error_change_over_horizon": 0.04982573532866832,
+   "tied_top_share": 0.6747474747
+  },
+  {
+   "stratum": "188_BASE",
+   "name": "Cell 188, limestone aggregate base on clayey subgrade",
+   "modality": "LWD",
+   "cell": 188,
+   "layer": "BASE",
+   "values": 36,
+   "pool": 36,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.209664506,
+    "RANDOM": 1.204442833,
+    "SPATIAL_MAXIMIN": 1.287954106,
+    "WEEK7_FROZEN": 1.235781921
+   },
+   "vs_random": {
+    "median_delta": -0.01246674188,
+    "ci95_median_delta": [
+     -0.0291662706,
+     0.001255694704
+    ],
+    "week7_lower_auc_share": 0.41,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": 0.05052142015,
+    "ci95_median_delta": [
+     0.02798509875,
+     0.06452666968
+    ],
+    "week7_lower_auc_share": 0.71,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.01254215996,
+    "week7_lower_auc_share": 0.44
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.186524352,
+     1.187109218,
+     1.189751641,
+     1.191123347,
+     1.192704828,
+     1.193937692,
+     1.199745657,
+     1.202949629,
+     1.209882338,
+     1.214698067,
+     1.218186307,
+     1.223256748,
+     1.230118983,
+     1.235425871,
+     1.239836609,
+     1.245956966
+    ],
+    "RANDOM": [
+     1.186524352,
+     1.189992516,
+     1.187680448,
+     1.189315655,
+     1.191440592,
+     1.190819431,
+     1.193017986,
+     1.200029927,
+     1.200682636,
+     1.204348456,
+     1.208899721,
+     1.216468775,
+     1.22067366,
+     1.227291369,
+     1.233150491,
+     1.239137324
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.186524352,
+     1.213085894,
+     1.251666857,
+     1.264436569,
+     1.28486896,
+     1.301228951,
+     1.319600129,
+     1.320882843,
+     1.321172041,
+     1.326876529,
+     1.32087689,
+     1.304047505,
+     1.277361239,
+     1.268129871,
+     1.29713585,
+     1.309358567
+    ],
+    "WEEK7_FROZEN": [
+     1.186524352,
+     1.148571634,
+     1.147555499,
+     1.175543397,
+     1.204361166,
+     1.202749312,
+     1.211957391,
+     1.231499859,
+     1.255990279,
+     1.275300079,
+     1.294579529,
+     1.292843348,
+     1.290107787,
+     1.274172305,
+     1.287471658,
+     1.301526784
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9912083333,
+    "RANDOM": 0.9917222222,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.009216950589,
+     "10": -0.05453784779,
+     "3": -0.02122052934,
+     "5": -0.02801868877
+    },
+    "RANDOM": {
+     "1": -0.01090107057,
+     "10": -0.04752753664,
+     "3": -0.01995326701,
+     "5": -0.0258471563
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.02848897314,
+     "10": -0.1409065971,
+     "3": -0.07999210244,
+     "5": -0.1212477166
+    },
+    "WEEK7_FROZEN": {
+     "1": 0.0232654436,
+     "10": -0.1211579999,
+     "3": -0.006077489229,
+     "5": -0.03585462308
+    }
+   },
+   "random_error_change_over_horizon": 0.04434209201970104,
+   "tied_top_share": 0.6841750842
+  },
+  {
+   "stratum": "188_BASE",
+   "name": "Cell 188, limestone aggregate base on clayey subgrade",
+   "modality": "FWD",
+   "cell": 188,
+   "layer": "BASE",
+   "values": 34,
+   "pool": 34,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.045572508,
+    "RANDOM": 1.040338034,
+    "SPATIAL_MAXIMIN": 1.09130748,
+    "WEEK7_FROZEN": 1.066526821
+   },
+   "vs_random": {
+    "median_delta": -0.01750154913,
+    "ci95_median_delta": [
+     -0.03035243594,
+     0.0001665683467
+    ],
+    "week7_lower_auc_share": 0.4,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": 0.02817630515,
+    "ci95_median_delta": [
+     0.003374449161,
+     0.04700163182
+    ],
+    "week7_lower_auc_share": 0.62,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.005520906931,
+    "week7_lower_auc_share": 0.45
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.087613196,
+     1.070165458,
+     1.059455366,
+     1.049245546,
+     1.03963728,
+     1.03615821,
+     1.032581427,
+     1.033688825,
+     1.038784943,
+     1.041893603,
+     1.042033844,
+     1.0440411,
+     1.040946413,
+     1.043902466,
+     1.044688843,
+     1.045115384
+    ],
+    "RANDOM": [
+     1.087613196,
+     1.071009165,
+     1.057838089,
+     1.048209239,
+     1.03996028,
+     1.037606792,
+     1.03154734,
+     1.029617829,
+     1.026397604,
+     1.026405697,
+     1.030042975,
+     1.030893732,
+     1.032822746,
+     1.036531529,
+     1.040441111,
+     1.043879555
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.087613196,
+     1.068787277,
+     1.053117645,
+     1.072733624,
+     1.101679378,
+     1.106993442,
+     1.121407458,
+     1.107186467,
+     1.096470207,
+     1.089359556,
+     1.074715175,
+     1.077306724,
+     1.086967373,
+     1.09471997,
+     1.112540837,
+     1.123640931
+    ],
+    "WEEK7_FROZEN": [
+     1.087613196,
+     1.047408286,
+     1.010727229,
+     1.021498279,
+     1.047458577,
+     1.062649343,
+     1.068165446,
+     1.077282023,
+     1.073212167,
+     1.077053759,
+     1.082787971,
+     1.083191975,
+     1.090657794,
+     1.08638396,
+     1.08349607,
+     1.084245687
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.98725,
+    "RANDOM": 0.9866111111,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 0.9972222222
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": 0.004846297939,
+     "10": 0.007741919258,
+     "3": 0.01330262746,
+     "5": 0.02047360353
+    },
+    "RANDOM": {
+     "1": 0.003726721468,
+     "10": 0.01999732312,
+     "3": 0.01417479919,
+     "5": 0.0186459854
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": 0.005867798262,
+     "10": -0.02280023617,
+     "3": -0.007499534182,
+     "5": -0.04801523837
+    },
+    "WEEK7_FROZEN": {
+     "1": 0.02691010227,
+     "10": -0.02805088664,
+     "3": 0.04069876829,
+     "5": -0.005429470558
+    }
+   },
+   "random_error_change_over_horizon": -0.040210656840908715,
+   "tied_top_share": 0.6853333333
+  },
+  {
+   "stratum": "189_BASE",
+   "name": "Cell 189, recycled aggregate base on clayey subgrade",
+   "modality": "LWD",
+   "cell": 189,
+   "layer": "BASE",
+   "values": 36,
+   "pool": 35,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 1.076619077,
+    "RANDOM": 1.081135779,
+    "SPATIAL_MAXIMIN": 1.191481086,
+    "WEEK7_FROZEN": 1.088315109
+   },
+   "vs_random": {
+    "median_delta": -0.002500438625,
+    "ci95_median_delta": [
+     -0.02268947704,
+     0.008001467727
+    ],
+    "week7_lower_auc_share": 0.48,
+    "favourable": false
+   },
+   "vs_maximin": {
+    "median_delta": 0.08536766054,
+    "ci95_median_delta": [
+     0.07290371147,
+     0.1022124625
+    ],
+    "week7_lower_auc_share": 0.92,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": -0.008294626194,
+    "week7_lower_auc_share": 0.44
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     1.055300894,
+     1.05352985,
+     1.052945064,
+     1.054109546,
+     1.054964005,
+     1.055959439,
+     1.061228628,
+     1.065977499,
+     1.072171894,
+     1.079658869,
+     1.08611425,
+     1.095335122,
+     1.101624892,
+     1.10945987,
+     1.116210053,
+     1.124693454
+    ],
+    "RANDOM": [
+     1.055300894,
+     1.055886395,
+     1.054929705,
+     1.056751057,
+     1.059812261,
+     1.064623885,
+     1.069674793,
+     1.074087096,
+     1.076246002,
+     1.08261606,
+     1.088975795,
+     1.098267047,
+     1.106655674,
+     1.114510633,
+     1.121750441,
+     1.129198803
+    ],
+    "SPATIAL_MAXIMIN": [
+     1.055300894,
+     1.103472872,
+     1.104243391,
+     1.116679647,
+     1.14673366,
+     1.174110366,
+     1.184713328,
+     1.182955907,
+     1.169948568,
+     1.171984797,
+     1.191999116,
+     1.227050802,
+     1.269272628,
+     1.311662669,
+     1.333569096,
+     1.312338
+    ],
+    "WEEK7_FROZEN": [
+     1.055300894,
+     1.120757924,
+     1.133810935,
+     1.113964289,
+     1.112730686,
+     1.118446181,
+     1.119820561,
+     1.131690452,
+     1.142341686,
+     1.137504492,
+     1.050598625,
+     1.0375362,
+     1.028819537,
+     1.012817529,
+     1.02132278,
+     1.029828638
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9917361111,
+    "RANDOM": 0.9914305556,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.00566862624,
+     "10": -0.05299896559,
+     "3": -0.0134004971,
+     "5": -0.01900471617
+    },
+    "RANDOM": {
+     "1": -0.007763205897,
+     "10": -0.05508082022,
+     "3": -0.01614304497,
+     "5": -0.02750053219
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.05620563763,
+     "10": -0.1546221346,
+     "3": -0.07624269741,
+     "5": -0.1345886497
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.07764804593,
+     "10": -0.01861123503,
+     "3": -0.07412288947,
+     "5": -0.0812178376
+    }
+   },
+   "random_error_change_over_horizon": 0.07002543958803852,
+   "tied_top_share": 0.7006666667
+  },
+  {
+   "stratum": "189_BASE",
+   "name": "Cell 189, recycled aggregate base on clayey subgrade",
+   "modality": "FWD",
+   "cell": 189,
+   "layer": "BASE",
+   "values": 35,
+   "pool": 34,
+   "horizon": 15,
+   "auc": {
+    "MISSING_ANCHOR_ONLY": 0.7338203002,
+    "RANDOM": 0.735647263,
+    "SPATIAL_MAXIMIN": 0.7757708211,
+    "WEEK7_FROZEN": 0.7009050281
+   },
+   "vs_random": {
+    "median_delta": 0.07630676034,
+    "ci95_median_delta": [
+     0.05448823398,
+     0.09325963949
+    ],
+    "week7_lower_auc_share": 0.78,
+    "favourable": true
+   },
+   "vs_maximin": {
+    "median_delta": 0.04739743863,
+    "ci95_median_delta": [
+     0.03684480427,
+     0.06472914214
+    ],
+    "week7_lower_auc_share": 0.79,
+    "favourable": true
+   },
+   "vs_missing_anchor": {
+    "median_delta": 0.07063809624,
+    "week7_lower_auc_share": 0.79
+   },
+   "curve_nmae": {
+    "MISSING_ANCHOR_ONLY": [
+     0.6568945761,
+     0.6766455269,
+     0.6955147369,
+     0.7102918281,
+     0.7223760076,
+     0.7328504805,
+     0.7434908872,
+     0.7427548425,
+     0.7471498691,
+     0.7477986505,
+     0.7541557825,
+     0.753088445,
+     0.7560151389,
+     0.755821508,
+     0.7597541002,
+     0.762298821
+    ],
+    "RANDOM": [
+     0.6568945761,
+     0.678535332,
+     0.7037234507,
+     0.7199865458,
+     0.7270190173,
+     0.7328222224,
+     0.7319786897,
+     0.7379226587,
+     0.7428952215,
+     0.7482406453,
+     0.7533851092,
+     0.7589990853,
+     0.7629472633,
+     0.7648668719,
+     0.7615923154,
+     0.7626944574
+    ],
+    "SPATIAL_MAXIMIN": [
+     0.6568945761,
+     0.6636616894,
+     0.6667853804,
+     0.6628042261,
+     0.6414106061,
+     0.7206705643,
+     0.7485047386,
+     0.7635477116,
+     0.7880300839,
+     0.8108209094,
+     0.836656195,
+     0.8705664227,
+     0.9080511269,
+     0.9460797972,
+     0.8607026342,
+     0.8396458857
+    ],
+    "WEEK7_FROZEN": [
+     0.6568945761,
+     0.6722196546,
+     0.6833617761,
+     0.6758238382,
+     0.6828795639,
+     0.6811965191,
+     0.6659169056,
+     0.6734510052,
+     0.679746913,
+     0.6877059196,
+     0.7027414722,
+     0.7211536204,
+     0.7332888005,
+     0.7520277781,
+     0.7772783323,
+     0.7926720692
+    ]
+   },
+   "coverage_after_15": {
+    "MISSING_ANCHOR_ONLY": 0.9905138889,
+    "RANDOM": 0.9907916667,
+    "SPATIAL_MAXIMIN": 1.0,
+    "WEEK7_FROZEN": 1.0
+   },
+   "improvement_after": {
+    "MISSING_ANCHOR_ONLY": {
+     "1": -0.05936303873,
+     "10": -0.2878458472,
+     "3": -0.1489633217,
+     "5": -0.2094162144
+    },
+    "RANDOM": {
+     "1": -0.06098137634,
+     "10": -0.2970788957,
+     "3": -0.1641317164,
+     "5": -0.2159053351
+    },
+    "SPATIAL_MAXIMIN": {
+     "1": -0.01056654778,
+     "10": -0.4274657727,
+     "3": -0.0467559417,
+     "5": -0.2164794856
+    },
+    "WEEK7_FROZEN": {
+     "1": -0.03125435046,
+     "10": -0.1954183167,
+     "3": -0.06957636726,
+     "5": -0.1054813321
+    }
+   },
+   "random_error_change_over_horizon": 0.1610606711477762,
+   "tied_top_share": 0.6843537415
+  }
+ ],
+ "counts": {
+  "evaluable_cells": 12,
+  "physical_cells": 4,
+  "favourable_vs_random": 3,
+  "favourable_vs_maximin": 8,
+  "favourable_vs_both": 3,
+  "clearly_worse_than_random": 4,
+  "clearly_worse_than_maximin": 1,
+  "by_modality_vs_both": {
+   "FWD": "2 of 6",
+   "LWD": "1 of 6"
+  }
+ },
+ "favourable_lists": {
+  "vs_random": [
+   "Cell 188, clayey subgrade · LWD",
+   "Cell 185, coarse RCA base on sandy subgrade · FWD",
+   "Cell 189, recycled aggregate base on clayey subgrade · FWD"
+  ],
+  "vs_maximin": [
+   "Cell 188, clayey subgrade · LWD",
+   "Cell 189, clayey subgrade · LWD",
+   "Cell 189, clayey subgrade · FWD",
+   "Cell 185, coarse RCA base on sandy subgrade · FWD",
+   "Cell 188, limestone aggregate base on clayey subgrade · LWD",
+   "Cell 188, limestone aggregate base on clayey subgrade · FWD",
+   "Cell 189, recycled aggregate base on clayey subgrade · LWD",
+   "Cell 189, recycled aggregate base on clayey subgrade · FWD"
+  ],
+  "vs_both": [
+   "Cell 188, clayey subgrade · LWD",
+   "Cell 185, coarse RCA base on sandy subgrade · FWD",
+   "Cell 189, recycled aggregate base on clayey subgrade · FWD"
+  ]
+ },
+ "pooled": {
+  "MISSING_ANCHOR_ONLY": {
+   "median_delta": -0.009934604384,
+   "week7_lower_auc_share": 0.4525
+  },
+  "RANDOM": {
+   "median_delta": -0.009884820508,
+   "week7_lower_auc_share": 0.4475
+  },
+  "SPATIAL_MAXIMIN": {
+   "median_delta": 0.03370844796,
+   "week7_lower_auc_share": 0.6516666667
+  }
+ },
+ "groups": {
+  "cell": {
+   "185": {
+    "cells": 2,
+    "favourable_vs_maximin": 1,
+    "favourable_vs_random": 1,
+    "median_of_cell_median_delta_vs_maximin": 0.02791199483,
+    "median_of_cell_median_delta_vs_random": 0.01012849648
+   },
+   "186": {
+    "cells": 2,
+    "favourable_vs_maximin": 0,
+    "favourable_vs_random": 0,
+    "median_of_cell_median_delta_vs_maximin": -0.03026679626,
+    "median_of_cell_median_delta_vs_random": -0.0534730664
+   },
+   "188": {
+    "cells": 4,
+    "favourable_vs_maximin": 3,
+    "favourable_vs_random": 1,
+    "median_of_cell_median_delta_vs_maximin": 0.03934886265,
+    "median_of_cell_median_delta_vs_random": -0.003918713577
+   },
+   "189": {
+    "cells": 4,
+    "favourable_vs_maximin": 4,
+    "favourable_vs_random": 1,
+    "median_of_cell_median_delta_vs_maximin": 0.05554754851,
+    "median_of_cell_median_delta_vs_random": -0.02181219068
+   }
+  },
+  "layer": {
+   "BASE": {
+    "cells": 8,
+    "favourable_vs_maximin": 5,
+    "favourable_vs_random": 2,
+    "median_of_cell_median_delta_vs_maximin": 0.03778687189,
+    "median_of_cell_median_delta_vs_random": -0.01199596456
+   },
+   "SUBGRADE": {
+    "cells": 4,
+    "favourable_vs_maximin": 3,
+    "favourable_vs_random": 1,
+    "median_of_cell_median_delta_vs_maximin": 0.04448582928,
+    "median_of_cell_median_delta_vs_random": -0.01824731401
+   }
+  },
+  "modality": {
+   "FWD": {
+    "cells": 6,
+    "favourable_vs_maximin": 4,
+    "favourable_vs_random": 2,
+    "median_of_cell_median_delta_vs_maximin": 0.02837496388,
+    "median_of_cell_median_delta_vs_random": -0.006436117202
+   },
+   "LWD": {
+    "cells": 6,
+    "favourable_vs_maximin": 4,
+    "favourable_vs_random": 1,
+    "median_of_cell_median_delta_vs_maximin": 0.05545972804,
+    "median_of_cell_median_delta_vs_random": -0.01199596456
+   }
+  },
+  "subgrade_family": {
+   "clayey subgrade (cells 188, 189)": {
+    "cells": 8,
+    "favourable_vs_maximin": 7,
+    "favourable_vs_random": 2,
+    "median_of_cell_median_delta_vs_maximin": 0.04895942939,
+    "median_of_cell_median_delta_vs_random": -0.007483590253
+   },
+   "sandy subgrade (cells 185, 186)": {
+    "cells": 4,
+    "favourable_vs_maximin": 1,
+    "favourable_vs_random": 1,
+    "median_of_cell_median_delta_vs_maximin": -0.01364030073,
+    "median_of_cell_median_delta_vs_random": -0.02217872059
+   }
+  }
+ },
+ "power_note": {
+  "random_error_change_min": -0.07348104242698593,
+  "random_error_change_max": 0.1610606711477762,
+  "cells_with_less_than_10pct_reduction": 12,
+  "text": "With nearest-test reconstruction, error changed little as tests were added, whatever the strategy. The published moduli vary mostly at a scale finer than the 7.5 m grid, so this benchmark has limited power to separate strategies."
+ },
+ "secondary": {
+  "ANCHORS_2": {
+   "interpretation_if_applied": "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE",
+   "favourable_vs_random": 2,
+   "favourable_vs_maximin": 7,
+   "replicates": 30
+  },
+  "ANCHORS_8": {
+   "interpretation_if_applied": "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE",
+   "favourable_vs_random": 3,
+   "favourable_vs_maximin": 6,
+   "replicates": 30
+  },
+  "IDW_P2": {
+   "interpretation_if_applied": "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE",
+   "favourable_vs_random": 2,
+   "favourable_vs_maximin": 10,
+   "replicates": 100
+  },
+  "METRIC_MODE": {
+   "interpretation_if_applied": "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE",
+   "favourable_vs_random": 2,
+   "favourable_vs_maximin": 4,
+   "replicates": 30
+  },
+  "RANDOM_TIES": {
+   "interpretation_if_applied": "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE",
+   "favourable_vs_random": 1,
+   "favourable_vs_maximin": 7,
+   "replicates": 30
+  }
+ },
+ "cmv_relationship": [
+  {
+   "stratum": "185_BASE",
+   "name": "Cell 185, coarse RCA base on sandy subgrade",
+   "modality": "LWD",
+   "n": 32,
+   "pearson_r": 0.03257953971
+  },
+  {
+   "stratum": "185_BASE",
+   "name": "Cell 185, coarse RCA base on sandy subgrade",
+   "modality": "FWD",
+   "n": 31,
+   "pearson_r": 0.1467148897
+  },
+  {
+   "stratum": "186_BASE",
+   "name": "Cell 186, fine RCA base on sandy subgrade",
+   "modality": "LWD",
+   "n": 35,
+   "pearson_r": 0.2934748172
+  },
+  {
+   "stratum": "186_BASE",
+   "name": "Cell 186, fine RCA base on sandy subgrade",
+   "modality": "FWD",
+   "n": 32,
+   "pearson_r": 0.2758336237
+  },
+  {
+   "stratum": "188_BASE",
+   "name": "Cell 188, limestone aggregate base on clayey subgrade",
+   "modality": "LWD",
+   "n": 36,
+   "pearson_r": 0.03670685374
+  },
+  {
+   "stratum": "188_BASE",
+   "name": "Cell 188, limestone aggregate base on clayey subgrade",
+   "modality": "FWD",
+   "n": 34,
+   "pearson_r": 0.09621168394
+  },
+  {
+   "stratum": "188_SG",
+   "name": "Cell 188, clayey subgrade",
+   "modality": "LWD",
+   "n": 36,
+   "pearson_r": 0.4296136178
+  },
+  {
+   "stratum": "188_SG",
+   "name": "Cell 188, clayey subgrade",
+   "modality": "FWD",
+   "n": 36,
+   "pearson_r": 0.2940363045
+  },
+  {
+   "stratum": "189_BASE",
+   "name": "Cell 189, recycled aggregate base on clayey subgrade",
+   "modality": "LWD",
+   "n": 35,
+   "pearson_r": 0.2339204697
+  },
+  {
+   "stratum": "189_BASE",
+   "name": "Cell 189, recycled aggregate base on clayey subgrade",
+   "modality": "FWD",
+   "n": 34,
+   "pearson_r": 0.02948596878
+  },
+  {
+   "stratum": "189_SG",
+   "name": "Cell 189, clayey subgrade",
+   "modality": "LWD",
+   "n": 36,
+   "pearson_r": -0.04095945951
+  },
+  {
+   "stratum": "189_SG",
+   "name": "Cell 189, clayey subgrade",
+   "modality": "FWD",
+   "n": 33,
+   "pearson_r": 0.0001589256974
+  }
+ ],
+ "interpretation_rule": {
+  "EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE OBSERVED": "favourable against BOTH RANDOM and SPATIAL_MAXIMIN in at least 75% of the evaluable cells, in at least two thirds of the cells of each modality, with at least one such cell in every physical MnROAD cell",
+  "INSUFFICIENT EXTERNAL SPATIAL EVIDENCE FOR CONCLUSION": "fewer than 6 evaluable cells or fewer than 3 physical MnROAD cells",
+  "LIMITED EXTERNAL SPATIAL PRIORITIZATION SIGNAL": "not the above, and either favourable against both in at least one third of the evaluable cells, or favourable against RANDOM in at least 75% of them",
+  "NO CLEAR EXTERNAL SPATIAL PRIORITIZATION ADVANTAGE": "otherwise",
+  "favourable_cell": "against baseline X a cell (stratum x modality) is favourable when the median delta(X) > 0, Week-7 has the lower AUC in more than half of the replicates, and the bootstrap 95% interval of the median delta(X) lies above 0"
+ },
+ "limitations": [
+  "Retrospective: published values were revealed in a simulated order. No test was placed in the field because of LayerProof.",
+  "One field study, four physical cells at one facility. The 100 replicates per cell are different starting configurations, not independent sites.",
+  "Input is published, buffer-averaged and rounded; raw roller records and raw deflection data were not available.",
+  "Sandy-subgrade strata could not be evaluated because their test positions are not exact in the source.",
+  "Two of the seven priority components are constant on this dataset, and about two thirds of decisions were ties resolved by key order.",
+  "Usefulness is measured by nearest-test reconstruction error only. A different notion of a useful test could rank the strategies differently.",
+  "Reconstruction error barely fell as tests were added, so the benchmark has limited power.",
+  "LWD and FWD moduli are not density, and nothing here concerns acceptance."
+ ],
+ "public_statement": "Retrospectively evaluated on a public NCHRP/MnROAD spatial field dataset; no clear advantage over the comparison baselines was observed.",
+ "allowed_term": "retrospective external spatial evaluation"
+}

@@ -1,0 +1,1499 @@
+{
+ "title": "External public-data validation",
+ "export": "EXTVAL_1.0.0",
+ "frozen": "2026-10-07",
+ "not_a_milestone": "This is not a LayerProof milestone. The accepted Week 1–8 results are unchanged.",
+ "question": "Does LayerProof's scientific, domain-support and abstention framework behave sensibly on independent real asphalt datasets outside the original SPARC soil/UGM trial?",
+ "method": {
+  "models": "Ordinary least squares, ridge (alpha 1.0) and a random forest (200 trees) — the accepted baselines, unchanged and untuned",
+  "random_forest_seed": 20261007,
+  "frozen_sparc_seed": 20261005,
+  "row_level_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+  "rule": "A relationship is called stable only if its direction is the same in every source group with at least 10 records in every dataset, and the one-input linear model beats the mean in every grouped design. Random-row results and publication-reported metrics never count."
+ },
+ "datasets": [
+  {
+   "id": "ASPHALT_A",
+   "label": "Asphalt A",
+   "short": "CMV, CCV, AICV and RMV with NNDG readings",
+   "evidence_class": "PUBLISHED_AGGREGATED_REAL",
+   "evidence_class_reason": "Processed per-record table distributed with a publication's code. Raw roller files and raw gauge records are not included, so REAL_FIELD (row-level source observations) is not justified.",
+   "source": {
+    "supplied_archive": "Bayesian Optimization-Based SVR and RF Models for.zip",
+    "archive_sha256": "bd33ba5a5bf1561a85ef6eb6d5101aa551fdd6d0d188d3edbb8ff04f5912431c",
+    "data_files": [
+     {
+      "name": "T-TrainTestSVR.csv",
+      "sha256": "e59015fc3bfc0b6b96bac62bdbe9f840918e2868f6b2a855d3bf6783b51893da",
+      "records": 153
+     },
+     {
+      "name": "New-Validation.csv",
+      "sha256": "e02fb3a1eb52adabec02ec537473e844f58a723820f6a8bb031f218bab220a17",
+      "records": 17
+     }
+    ],
+    "publication": "Title begins \"Bayesian Optimization-Based SVR and RF Models for…\" (truncated in the archive name). No README, citation, DOI or author is inside the archive; the source record was not identified.",
+    "license": "Not stated in the archive"
+   },
+   "material": "Asphalt, as described by the provider of the files. The archive itself does not name the material.",
+   "context": "Field or laboratory context is not stated in the archive.",
+   "records": 170,
+   "record_nature": "Processed table, one row per paired record; pairing was done by the source",
+   "projects": "Not identified",
+   "sites": "Not identified",
+   "test_locations": "Not identified",
+   "variables": [
+    {
+     "name": "Sectionlength",
+     "role": "position-like value 1–30",
+     "unit": "not stated"
+    },
+    {
+     "name": "LanePass",
+     "role": "integer code 11–33 (11 codes); meaning not documented",
+     "unit": "—"
+    },
+    {
+     "name": "Amplitude (mm)",
+     "role": "roller amplitude",
+     "unit": "mm"
+    },
+    {
+     "name": "Speed (km/h)",
+     "role": "roller speed",
+     "unit": "km/h"
+    },
+    {
+     "name": "Temp",
+     "role": "temperature",
+     "unit": "not stated"
+    },
+    {
+     "name": "RMV, CMV, AICV, CCV",
+     "role": "compaction measurement values",
+     "unit": "not stated"
+    },
+    {
+     "name": "NNDG",
+     "role": "physical target; column name only, 95.0–98.9",
+     "unit": "not stated"
+    }
+   ],
+   "absent": [
+    "coordinates, GPS, easting/northing, CRS",
+    "project and site identifiers",
+    "roller make and model",
+    "frequency",
+    "layer information",
+    "dates or times",
+    "explicit pass count",
+    "units for the ICMVs, temperature and NNDG"
+   ],
+   "targets": [
+    "NNDG"
+   ],
+   "grouping": "LanePass code (source column; meaning not documented)",
+   "independent_validation": "INDEPENDENT PROJECT/SPATIAL VALIDATION NOT ASSESSABLE",
+   "spatial": "SPATIAL CANDIDATE PRIORITIZATION NOT ASSESSABLE FROM THIS DATASET",
+   "spatial_demo_message": "Spatial verification analysis unavailable — source dataset does not provide suitable location geometry.",
+   "accepted_gate": {
+    "state_if_source_pairing_is_taken_at_face_value": "PARTIAL",
+    "state_counting_only_pairs_layerproof_can_verify": "NOT_READY",
+    "scientific_claim_allowed": false,
+    "failed_checks": [
+     "REAL_IC",
+     "TEST_MODALITY",
+     "IC_CRS_CONFIRMED",
+     "SPOT_COORDINATES",
+     "UNITS",
+     "DETERMINISTIC_ASSOCIATION"
+    ],
+    "checks": [
+     {
+      "code": "REAL_IC",
+      "status": "FAIL"
+     },
+     {
+      "code": "REAL_SPOT",
+      "status": "PASS"
+     },
+     {
+      "code": "TEST_MODALITY",
+      "status": "FAIL"
+     },
+     {
+      "code": "IC_CRS_CONFIRMED",
+      "status": "FAIL"
+     },
+     {
+      "code": "SPOT_COORDINATES",
+      "status": "FAIL"
+     },
+     {
+      "code": "UNITS",
+      "status": "FAIL"
+     },
+     {
+      "code": "PROVENANCE",
+      "status": "PASS"
+     },
+     {
+      "code": "DETERMINISTIC_ASSOCIATION",
+      "status": "FAIL"
+     },
+     {
+      "code": "REAL_PAIRED_RECORDS",
+      "status": "PASS"
+     },
+     {
+      "code": "NO_SYNTHETIC_TARGETS",
+      "status": "PASS"
+     },
+     {
+      "code": "STATISTICAL_ADEQUACY",
+      "status": "UNRESOLVED"
+     }
+    ]
+   },
+   "correlations": [
+    {
+     "pair": "AICV ~ NNDG",
+     "overall_r": 0.6646211828,
+     "n": 170,
+     "groups_n_ge_10": 11,
+     "positive": 11,
+     "negative": 0,
+     "by_group": {
+      "11": 0.9318337175,
+      "12": 0.8639664407,
+      "13": 0.8604118777,
+      "14": 0.8818448868,
+      "21": 0.8135239491,
+      "22": 0.8134038169,
+      "23": 0.8207968338,
+      "24": 0.4389000749,
+      "31": 0.7757406279,
+      "32": 0.8788642266,
+      "33": 0.9411489855
+     }
+    },
+    {
+     "pair": "CCV ~ NNDG",
+     "overall_r": 0.6760274597,
+     "n": 170,
+     "groups_n_ge_10": 11,
+     "positive": 11,
+     "negative": 0,
+     "by_group": {
+      "11": 0.9550391229,
+      "12": 0.947348353,
+      "13": 0.9537320761,
+      "14": 0.7101725129,
+      "21": 0.8670640611,
+      "22": 0.8264925102,
+      "23": 0.9234466603,
+      "24": 0.8130297267,
+      "31": 0.8205601446,
+      "32": 0.9077596119,
+      "33": 0.9540897994
+     }
+    },
+    {
+     "pair": "CMV ~ NNDG",
+     "overall_r": 0.6155717892,
+     "n": 170,
+     "groups_n_ge_10": 11,
+     "positive": 10,
+     "negative": 1,
+     "by_group": {
+      "11": 0.9222589419,
+      "12": 0.8940918801,
+      "13": 0.9186322979,
+      "14": 0.4692460461,
+      "21": 0.8847185335,
+      "22": 0.9473898479,
+      "23": 0.7808705576,
+      "24": -0.1510491333,
+      "31": 0.6905307911,
+      "32": 0.8078059281,
+      "33": 0.7423822405
+     }
+    },
+    {
+     "pair": "RMV ~ NNDG",
+     "overall_r": 0.6018675501,
+     "n": 170,
+     "groups_n_ge_10": 11,
+     "positive": 10,
+     "negative": 1,
+     "by_group": {
+      "11": 0.4329478961,
+      "12": 0.7281408138,
+      "13": 0.8148188293,
+      "14": 0.5766270024,
+      "21": 0.7818358136,
+      "22": 0.8393550062,
+      "23": 0.6504153191,
+      "24": 0.569525014,
+      "31": -0.006038184072,
+      "32": 0.2235388617,
+      "33": 0.3480445042
+     }
+    }
+   ],
+   "results": {
+    "NNDG": [
+     {
+      "inputs": "CMV",
+      "feature_set": "cmv",
+      "design": "Leave one LanePass code out (10 codes)",
+      "design_id": "A_LOGO_LANEPASS",
+      "n": 153,
+      "groups": 10,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.1627290212,
+      "ridge": 0.1626121718,
+      "random_forest": 0.2380681227,
+      "rmse_ols": 1.05858517,
+      "mae_ols": 0.9030618119
+     },
+     {
+      "inputs": "CMV",
+      "feature_set": "cmv",
+      "design": "Source's own validation file",
+      "design_id": "A_SOURCE_HOLDOUT",
+      "n": 17,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.1291094439,
+      "ridge": 0.1203318847,
+      "random_forest": -1.177047561,
+      "rmse_ols": 0.5264772045,
+      "mae_ols": 0.4600185027
+     },
+     {
+      "inputs": "CMV",
+      "feature_set": "cmv",
+      "design": "Random rows, 5 folds",
+      "design_id": "A_ROW_LEVEL",
+      "n": 153,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.3121260786,
+      "ridge": 0.312105007,
+      "random_forest": 0.3827045053,
+      "rmse_ols": 0.9595049266,
+      "mae_ols": 0.8129547451
+     },
+     {
+      "inputs": "CCV",
+      "feature_set": "ccv",
+      "design": "Leave one LanePass code out (10 codes)",
+      "design_id": "A_LOGO_LANEPASS",
+      "n": 153,
+      "groups": 10,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2713592884,
+      "ridge": 0.2711493164,
+      "random_forest": 0.1045159074,
+      "rmse_ols": 0.9875281928,
+      "mae_ols": 0.8434289095
+     },
+     {
+      "inputs": "CCV",
+      "feature_set": "ccv",
+      "design": "Source's own validation file",
+      "design_id": "A_SOURCE_HOLDOUT",
+      "n": 17,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.08978594743,
+      "ridge": 0.07658129193,
+      "random_forest": -0.2551197182,
+      "rmse_ols": 0.5382320429,
+      "mae_ols": 0.4542837172
+     },
+     {
+      "inputs": "CCV",
+      "feature_set": "ccv",
+      "design": "Random rows, 5 folds",
+      "design_id": "A_ROW_LEVEL",
+      "n": 153,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.3959101739,
+      "ridge": 0.3959302921,
+      "random_forest": 0.292229975,
+      "rmse_ols": 0.8991735998,
+      "mae_ols": 0.7622032862
+     },
+     {
+      "inputs": "AICV",
+      "feature_set": "aicv",
+      "design": "Leave one LanePass code out (10 codes)",
+      "design_id": "A_LOGO_LANEPASS",
+      "n": 153,
+      "groups": 10,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2713891159,
+      "ridge": 0.2710203763,
+      "random_forest": 0.2347134516,
+      "rmse_ols": 0.98750798,
+      "mae_ols": 0.8497425621
+     },
+     {
+      "inputs": "AICV",
+      "feature_set": "aicv",
+      "design": "Source's own validation file",
+      "design_id": "A_SOURCE_HOLDOUT",
+      "n": 17,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2376984087,
+      "ridge": 0.2254085847,
+      "random_forest": -0.4479570093,
+      "rmse_ols": 0.4925623294,
+      "mae_ols": 0.4497562751
+     },
+     {
+      "inputs": "AICV",
+      "feature_set": "aicv",
+      "design": "Random rows, 5 folds",
+      "design_id": "A_ROW_LEVEL",
+      "n": 153,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.3817268143,
+      "ridge": 0.3816826612,
+      "random_forest": 0.4103318576,
+      "rmse_ols": 0.9096681569,
+      "mae_ols": 0.7787146628
+     },
+     {
+      "inputs": "RMV",
+      "feature_set": "rmv",
+      "design": "Leave one LanePass code out (10 codes)",
+      "design_id": "A_LOGO_LANEPASS",
+      "n": 153,
+      "groups": 10,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2017450781,
+      "ridge": 0.2014702513,
+      "random_forest": 0.1231870127,
+      "rmse_ols": 1.03362639,
+      "mae_ols": 0.8891790503
+     },
+     {
+      "inputs": "RMV",
+      "feature_set": "rmv",
+      "design": "Source's own validation file",
+      "design_id": "A_SOURCE_HOLDOUT",
+      "n": 17,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.5916096288,
+      "ridge": -0.6011228843,
+      "random_forest": -1.017061366,
+      "rmse_ols": 0.7117312915,
+      "mae_ols": 0.6003436359
+     },
+     {
+      "inputs": "RMV",
+      "feature_set": "rmv",
+      "design": "Random rows, 5 folds",
+      "design_id": "A_ROW_LEVEL",
+      "n": 153,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.3092009076,
+      "ridge": 0.3091960202,
+      "random_forest": 0.2897167716,
+      "rmse_ols": 0.9615429007,
+      "mae_ols": 0.8282662356
+     },
+     {
+      "inputs": "CMV + CCV + AICV + RMV",
+      "feature_set": "icmv_all",
+      "design": "Leave one LanePass code out (10 codes)",
+      "design_id": "A_LOGO_LANEPASS",
+      "n": 153,
+      "groups": 10,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.3486196331,
+      "ridge": 0.349312673,
+      "random_forest": 0.484334136,
+      "rmse_ols": 0.9337059338,
+      "mae_ols": 0.760990823
+     },
+     {
+      "inputs": "CMV + CCV + AICV + RMV",
+      "feature_set": "icmv_all",
+      "design": "Source's own validation file",
+      "design_id": "A_SOURCE_HOLDOUT",
+      "n": 17,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.001393914909,
+      "ridge": 0.06093458298,
+      "random_forest": -0.4039465597,
+      "rmse_ols": 0.5637608137,
+      "mae_ols": 0.4332708979
+     },
+     {
+      "inputs": "CMV + CCV + AICV + RMV",
+      "feature_set": "icmv_all",
+      "design": "Random rows, 5 folds",
+      "design_id": "A_ROW_LEVEL",
+      "n": 153,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.4923822819,
+      "ridge": 0.4924371129,
+      "random_forest": 0.6465567623,
+      "rmse_ols": 0.8242542076,
+      "mae_ols": 0.6716757866
+     },
+     {
+      "inputs": "ICMVs + amplitude, speed, temperature",
+      "feature_set": "icmv_plus_operating",
+      "design": "Leave one LanePass code out (10 codes)",
+      "design_id": "A_LOGO_LANEPASS",
+      "n": 153,
+      "groups": 10,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.490399298,
+      "ridge": 0.4942052731,
+      "random_forest": 0.6176271445,
+      "rmse_ols": 0.8258625929,
+      "mae_ols": 0.6415398098
+     },
+     {
+      "inputs": "ICMVs + amplitude, speed, temperature",
+      "feature_set": "icmv_plus_operating",
+      "design": "Source's own validation file",
+      "design_id": "A_SOURCE_HOLDOUT",
+      "n": 17,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.006407533971,
+      "ridge": 0.001411026325,
+      "random_forest": 0.3596851684,
+      "rmse_ols": 0.5659586746,
+      "mae_ols": 0.486338903
+     },
+     {
+      "inputs": "ICMVs + amplitude, speed, temperature",
+      "feature_set": "icmv_plus_operating",
+      "design": "Random rows, 5 folds",
+      "design_id": "A_ROW_LEVEL",
+      "n": 153,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.6162912703,
+      "ridge": 0.6214653368,
+      "random_forest": 0.7772696257,
+      "rmse_ols": 0.7166277584,
+      "mae_ols": 0.5769326484
+     }
+    ]
+   },
+   "source_publication_methods": "The archive's notebooks tune SVR and random-forest models with Bayesian optimisation on a random 90/10 row split, and predict NNDG from LanePass, speed and temperature only — not from the ICMVs. Those results are characteristics of the source and are not LayerProof validation.",
+   "domain": [
+    {
+     "dimension": "Material",
+     "status": "OUT_OF_DOMAIN",
+     "reason": "Asphalt; the accepted LayerProof evidence is soil and unbound granular material."
+    },
+    {
+     "dimension": "ICMV family",
+     "status": "PARTIALLY_SUPPORTED_DOMAIN",
+     "reason": "CMV and CCV exist by name in the accepted evidence; AICV and RMV do not. Roller system and units are not stated, so equivalence cannot be confirmed."
+    },
+    {
+     "dimension": "ICMV value range",
+     "status": "OUT_OF_DOMAIN",
+     "reason": "0% of CCV values and 44% of CMV values fall inside the accepted reference ranges."
+    },
+    {
+     "dimension": "Pass range",
+     "status": "NOT_ASSESSABLE",
+     "reason": "No explicit pass count; the LanePass code is not documented and is not decoded."
+    },
+    {
+     "dimension": "Roller / machine",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Not stated."
+    },
+    {
+     "dimension": "Temperature",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Present without a unit; the accepted evidence has no temperature field."
+    },
+    {
+     "dimension": "Speed",
+     "status": "NOT_ASSESSABLE",
+     "reason": "3.0–4.9 km/h; speed is not part of the accepted reference domain (only a source filter above 0.65 km/h)."
+    },
+    {
+     "dimension": "Amplitude",
+     "status": "NOT_ASSESSABLE",
+     "reason": "0.29–0.34 mm; the accepted evidence has no amplitude field."
+    },
+    {
+     "dimension": "Frequency",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Not present."
+    },
+    {
+     "dimension": "Target / test modality",
+     "status": "OUT_OF_DOMAIN",
+     "reason": "NNDG without a unit; the accepted evidence is nuclear-gauge dry density in t/m³ and laboratory moisture."
+    },
+    {
+     "dimension": "Spatial reference",
+     "status": "NOT_ASSESSABLE",
+     "reason": "No coordinates, CRS or documented location identifiers."
+    },
+    {
+     "dimension": "Physical-anchor adequacy",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Every row carries a physical value, but independent locations cannot be identified."
+    }
+   ],
+   "domain_overall": "OUT_OF_DOMAIN",
+   "limitations": [
+    "No documentation inside the archive beyond column names.",
+    "Units missing for the ICMVs, temperature and the target.",
+    "One dataset of unknown extent; no project, site or location identity.",
+    "LanePass code 32 occurs in both the training file and the source's validation file.",
+    "Licence not stated, so the records are not redistributed."
+   ]
+  },
+  {
+   "id": "ASPHALT_B",
+   "label": "Asphalt B",
+   "short": "HMV with NDG and core density",
+   "evidence_class": "PUBLISHED_AGGREGATED_REAL",
+   "evidence_class_reason": "Publication supplementary table of processed values (pass counts are fractional in 160 of 180 records, so values are aggregated). Raw roller and test files are not included.",
+   "source": {
+    "supplied_archive": "Supplementary Materials.zip",
+    "archive_sha256": "2b28c0de38103b355aa8ff3476907609f795102879a91661dabf480b35060f54",
+    "data_files": [
+     {
+      "name": "DataSet Avalibality.xlsx",
+      "sha256": "20c122700359cea61ad894c76c67feb84acf40b5114f97c89ea50489295366a6",
+      "records": 180
+     }
+    ],
+    "publication": "Supplementary material for \"Optimizing Asphalt Compaction: Intelligent Compaction Roller Frequency and Machine Learning Prediction of In-Place Density\" (title as stated in the supplied document).",
+    "found_by_web_search": "Mendeley Data record \"Supplementary Materials\", DOI 10.17632/v28n8x6hgf.1, published 26 January 2026 (checked 2026-10-07; not stated inside the archive).",
+    "license": "Not stated in the archive; the licence field of the public record was blank when checked"
+   },
+   "material": "Asphalt (stated in the supplementary document's title).",
+   "context": "In-place asphalt density; the workbook does not describe the projects or sites.",
+   "records": 180,
+   "record_nature": "Publication supplementary table; processed and aggregated values",
+   "projects": "Not identified (the document mentions \"projects\" but the table has no project column)",
+   "sites": "Not identified",
+   "test_locations": "60 distinct ID labels (1L–30R), each appearing once per layer thickness; whether a label is the same place across thicknesses is not stated",
+   "variables": [
+    {
+     "name": "ID",
+     "role": "label: number 1–30 plus L or R",
+     "unit": "—"
+    },
+    {
+     "name": "Layer thickness (mm)",
+     "role": "three values: 38, 50.8, 63.5",
+     "unit": "mm"
+    },
+    {
+     "name": "Freq (Hz)",
+     "role": "roller frequency",
+     "unit": "Hz"
+    },
+    {
+     "name": "Speed (kph)",
+     "role": "roller speed",
+     "unit": "km/h"
+    },
+    {
+     "name": "Temp (C )",
+     "role": "temperature",
+     "unit": "°C"
+    },
+    {
+     "name": "Passes",
+     "role": "pass count, mostly fractional",
+     "unit": "count"
+    },
+    {
+     "name": "HMV",
+     "role": "compaction measurement value",
+     "unit": "not stated"
+    },
+    {
+     "name": "NDG Density (%Gmm)",
+     "role": "physical target",
+     "unit": "%Gmm"
+    },
+    {
+     "name": "Core Density (%Gmm)",
+     "role": "physical target",
+     "unit": "%Gmm"
+    }
+   ],
+   "absent": [
+    "coordinates, GPS, easting/northing, CRS",
+    "project and site identifiers",
+    "roller make and model",
+    "amplitude",
+    "dates or times",
+    "definition and unit of HMV"
+   ],
+   "targets": [
+    "Core density (%Gmm)",
+    "NDG density (%Gmm)"
+   ],
+   "grouping": "Layer thickness (3 values) and ID number (30); neither is stated to be a project or site",
+   "independent_validation": "INDEPENDENT PROJECT/SPATIAL VALIDATION NOT ASSESSABLE",
+   "spatial": "SPATIAL CANDIDATE PRIORITIZATION NOT ASSESSABLE FROM THIS DATASET",
+   "spatial_demo_message": "Spatial verification analysis unavailable — source dataset does not provide suitable location geometry.",
+   "flagged_records": {
+    "count": 1,
+    "note": "One record (ID 2R at 50.8 mm) has a roller speed of 67 km/h and a temperature of 2.9 °C, which looks like shifted columns. It is reported, not corrected. Results are given with and without it."
+   },
+   "accepted_gate": {
+    "state_if_source_pairing_is_taken_at_face_value": "PARTIAL",
+    "state_counting_only_pairs_layerproof_can_verify": "NOT_READY",
+    "scientific_claim_allowed": false,
+    "failed_checks": [
+     "REAL_IC",
+     "TEST_MODALITY",
+     "IC_CRS_CONFIRMED",
+     "SPOT_COORDINATES",
+     "UNITS",
+     "DETERMINISTIC_ASSOCIATION"
+    ],
+    "checks": [
+     {
+      "code": "REAL_IC",
+      "status": "FAIL"
+     },
+     {
+      "code": "REAL_SPOT",
+      "status": "PASS"
+     },
+     {
+      "code": "TEST_MODALITY",
+      "status": "FAIL"
+     },
+     {
+      "code": "IC_CRS_CONFIRMED",
+      "status": "FAIL"
+     },
+     {
+      "code": "SPOT_COORDINATES",
+      "status": "FAIL"
+     },
+     {
+      "code": "UNITS",
+      "status": "FAIL"
+     },
+     {
+      "code": "PROVENANCE",
+      "status": "PASS"
+     },
+     {
+      "code": "DETERMINISTIC_ASSOCIATION",
+      "status": "FAIL"
+     },
+     {
+      "code": "REAL_PAIRED_RECORDS",
+      "status": "PASS"
+     },
+     {
+      "code": "NO_SYNTHETIC_TARGETS",
+      "status": "PASS"
+     },
+     {
+      "code": "STATISTICAL_ADEQUACY",
+      "status": "UNRESOLVED"
+     }
+    ]
+   },
+   "correlations": [
+    {
+     "pair": "HMV ~ core density",
+     "overall_r": 0.2491739368,
+     "n": 179,
+     "by_group": {
+      "38 mm": -0.4418384466,
+      "50.8 mm": -0.1200682184,
+      "63.5 mm": 0.424276507
+     },
+     "positive": 1,
+     "negative": 2
+    },
+    {
+     "pair": "HMV ~ NDG density",
+     "overall_r": 0.50828137,
+     "n": 179,
+     "by_group": {
+      "38 mm": -0.302679219,
+      "50.8 mm": -0.1431916145,
+      "63.5 mm": 0.2334009773
+     },
+     "positive": 1,
+     "negative": 2
+    },
+    {
+     "pair": "NDG density ~ core density",
+     "overall_r": 0.6967043749,
+     "n": 179,
+     "by_group": {
+      "38 mm": 0.7817388698,
+      "50.8 mm": 0.8842603682,
+      "63.5 mm": 0.7340646355
+     },
+     "core_minus_ndg_mean_by_group": {
+      "38 mm": -0.805,
+      "50.8 mm": 0.4389830508,
+      "63.5 mm": 2.96
+     }
+    }
+   ],
+   "results": {
+    "CORE_DENSITY": [
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 179,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -1.747356055,
+      "ridge": -1.737132258,
+      "random_forest": -2.405272538,
+      "rmse_ols": 3.395170996,
+      "mae_ols": 2.71271267
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 179,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.03230503328,
+      "ridge": 0.03252982216,
+      "random_forest": -0.3126464924,
+      "rmse_ols": 2.014992433,
+      "mae_ols": 1.557623799
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.04205955275,
+      "ridge": -0.04179812732,
+      "random_forest": -0.5011162387,
+      "rmse_ols": 1.926874078,
+      "mae_ols": 1.427827925
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 179,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.03477550131,
+      "ridge": 0.034831466,
+      "random_forest": -0.2358180157,
+      "rmse_ols": 2.012418711,
+      "mae_ols": 1.568185049
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 179,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.1836749747,
+      "ridge": 0.1768461963,
+      "random_forest": -0.4741023088,
+      "rmse_ols": 1.850698759,
+      "mae_ols": 1.483864885
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 179,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.6818855996,
+      "ridge": 0.6822499746,
+      "random_forest": 0.6979447354,
+      "rmse_ols": 1.155302846,
+      "mae_ols": 0.8974184801
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.7910997021,
+      "ridge": 0.7910529701,
+      "random_forest": 0.8198752612,
+      "rmse_ols": 0.8627333655,
+      "mae_ols": 0.6731404167
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 179,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.6761879596,
+      "ridge": 0.6762584566,
+      "random_forest": 0.687641828,
+      "rmse_ols": 1.16560305,
+      "mae_ols": 0.8965630177
+     }
+    ],
+    "NDG_DENSITY": [
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 179,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.480465413,
+      "ridge": -0.4818821834,
+      "random_forest": -1.15759651,
+      "rmse_ols": 3.057722213,
+      "mae_ols": 2.620825171
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 179,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2222109212,
+      "ridge": 0.2225514297,
+      "random_forest": 0.05180269415,
+      "rmse_ols": 2.216306477,
+      "mae_ols": 1.747144328
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2829913035,
+      "ridge": 0.2815203668,
+      "random_forest": 0.3552707181,
+      "rmse_ols": 2.160690665,
+      "mae_ols": 1.821313428
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 179,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.2382313923,
+      "ridge": 0.2383220522,
+      "random_forest": 0.1272823843,
+      "rmse_ols": 2.193362586,
+      "mae_ols": 1.740923219
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 179,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -1.151244765,
+      "ridge": -1.089471286,
+      "random_forest": -1.514640383,
+      "rmse_ols": 3.685902208,
+      "mae_ols": 3.342983002
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 179,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.6098141625,
+      "ridge": 0.6099459633,
+      "random_forest": 0.6502783163,
+      "rmse_ols": 1.569765016,
+      "mae_ols": 1.171874582
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.6247375509,
+      "ridge": 0.6242444701,
+      "random_forest": 0.7144378424,
+      "rmse_ols": 1.563140222,
+      "mae_ols": 1.212090503
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 179,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.6011173267,
+      "ridge": 0.6012866272,
+      "random_forest": 0.6367111957,
+      "rmse_ols": 1.587162819,
+      "mae_ols": 1.201230843
+     }
+    ]
+   },
+   "results_as_supplied": {
+    "CORE_DENSITY": [
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 180,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -1.847450119,
+      "ridge": -1.83603043,
+      "random_forest": -2.422205241,
+      "rmse_ols": 3.462601198,
+      "mae_ols": 2.746221174
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 180,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.04671246008,
+      "ridge": 0.04683555696,
+      "random_forest": -0.2971513881,
+      "rmse_ols": 2.003486271,
+      "mae_ols": 1.549357985
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.03906807506,
+      "ridge": -0.03889357407,
+      "random_forest": -0.5034294839,
+      "rmse_ols": 1.924106317,
+      "mae_ols": 1.430682001
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 180,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.04688799209,
+      "ridge": 0.0470002439,
+      "random_forest": -0.2626618102,
+      "rmse_ols": 2.003301808,
+      "mae_ols": 1.558714821
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 180,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.1605625009,
+      "ridge": 0.1104593561,
+      "random_forest": -0.5183433853,
+      "rmse_ols": 1.880046519,
+      "mae_ols": 1.501115271
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 180,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.6905190182,
+      "ridge": 0.6913867647,
+      "random_forest": 0.6540785294,
+      "rmse_ols": 1.141540687,
+      "mae_ols": 0.8837021885
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.7912134437,
+      "ridge": 0.7900420936,
+      "random_forest": 0.8059588319,
+      "rmse_ols": 0.8624984639,
+      "mae_ols": 0.6733927996
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 180,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.6755458006,
+      "ridge": 0.6757697843,
+      "random_forest": 0.6738698805,
+      "rmse_ols": 1.16882936,
+      "mae_ols": 0.9070817129
+     }
+    ],
+    "NDG_DENSITY": [
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 180,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.4490772098,
+      "ridge": -0.450753928,
+      "random_forest": -1.17916588,
+      "rmse_ols": 3.027083697,
+      "mae_ols": 2.592529033
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 180,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2248243434,
+      "ridge": 0.2249116675,
+      "random_forest": 0.05988040171,
+      "rmse_ols": 2.214005671,
+      "mae_ols": 1.782396828
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.2570274463,
+      "ridge": 0.2555004808,
+      "random_forest": 0.3488605454,
+      "rmse_ols": 2.199463551,
+      "mae_ols": 1.866925278
+     },
+     {
+      "inputs": "HMV",
+      "feature_set": "hmv",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 180,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": 0.2106822958,
+      "ridge": 0.211041794,
+      "random_forest": 0.08610107658,
+      "rmse_ols": 2.234110183,
+      "mae_ols": 1.807494776
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Leave one layer thickness out (3 values)",
+      "design_id": "B_LOGO_THICKNESS",
+      "n": 180,
+      "groups": 3,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -1.73688193,
+      "ridge": -1.631932655,
+      "random_forest": -1.579341714,
+      "rmse_ols": 4.160128037,
+      "mae_ols": 3.53700994
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Grouped by source ID number (30)",
+      "design_id": "B_GROUP_ID",
+      "n": 180,
+      "groups": 30,
+      "validation_label": "GROUPED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": -0.6400070064,
+      "ridge": -0.5678141167,
+      "random_forest": 0.6443129415,
+      "rmse_ols": 3.220338453,
+      "mae_ols": 1.440739283
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Source's own testing block",
+      "design_id": "B_SOURCE_HOLDOUT",
+      "n": 36,
+      "groups": null,
+      "validation_label": "SOURCE-DEFINED HOLDOUT WITHIN ONE DATASET — NOT INDEPENDENT PROJECT/SITE VALIDATION",
+      "ols": 0.5867883123,
+      "ridge": 0.5869569109,
+      "random_forest": 0.7041525619,
+      "rmse_ols": 1.640275063,
+      "mae_ols": 1.257465888
+     },
+     {
+      "inputs": "HMV + frequency, speed, temperature, passes",
+      "feature_set": "hmv_plus_operating",
+      "design": "Random rows, 5 folds",
+      "design_id": "B_ROW_LEVEL",
+      "n": 180,
+      "groups": null,
+      "validation_label": "EXPLORATORY ROW-LEVEL ANALYSIS — NOT INDEPENDENT EXTERNAL VALIDATION",
+      "ols": -0.6784136114,
+      "ridge": -0.6047263378,
+      "random_forest": 0.6198636635,
+      "rmse_ols": 3.257828082,
+      "mae_ols": 1.466086555
+     }
+    ]
+   },
+   "modality_comparison": {
+    "question": "Does NDG density stand in for core density?",
+    "leave_one_thickness_out": {
+     "n": 179,
+     "groups": 3,
+     "validation_label": "PHYSICAL-MODALITY COMPARISON (NDG vs core) — not an IC relationship",
+     "ols": -1.362030899,
+     "ridge": null,
+     "random_forest": null,
+     "rmse_ols": 3.148088739,
+     "mae_ols": 2.929300623
+    },
+    "grouped_by_id": {
+     "n": 179,
+     "groups": 30,
+     "validation_label": "PHYSICAL-MODALITY COMPARISON (NDG vs core) — not an IC relationship",
+     "ols": 0.4820112989,
+     "ridge": null,
+     "random_forest": null,
+     "rmse_ols": 1.474226867,
+     "mae_ols": 1.216071147
+    }
+   },
+   "source_publication_methods": "The publication reports CatBoost, SVR and random-forest models tuned with Bayesian optimisation, and uses NDG density as an input when predicting core density. Those results are characteristics of the source and are not LayerProof validation.",
+   "domain": [
+    {
+     "dimension": "Material",
+     "status": "OUT_OF_DOMAIN",
+     "reason": "Asphalt; the accepted LayerProof evidence is soil and unbound granular material."
+    },
+    {
+     "dimension": "ICMV family",
+     "status": "OUT_OF_DOMAIN",
+     "reason": "HMV does not occur in the accepted evidence (CMV and CCV)."
+    },
+    {
+     "dimension": "ICMV value range",
+     "status": "NOT_ASSESSABLE",
+     "reason": "No accepted reference range exists for HMV."
+    },
+    {
+     "dimension": "Pass range",
+     "status": "PARTIALLY_SUPPORTED_DOMAIN",
+     "reason": "Passes 1–18.5, mostly fractional; accepted reference passes are 2–4 (soil) and 2, 4, 8 (UGM), as integers."
+    },
+    {
+     "dimension": "Roller / machine",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Not stated."
+    },
+    {
+     "dimension": "Temperature",
+     "status": "NOT_ASSESSABLE",
+     "reason": "38.5–98.9 °C; the accepted evidence has no temperature field."
+    },
+    {
+     "dimension": "Speed",
+     "status": "NOT_ASSESSABLE",
+     "reason": "2.3–8.8 km/h; speed is not part of the accepted reference domain."
+    },
+    {
+     "dimension": "Amplitude",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Not present."
+    },
+    {
+     "dimension": "Frequency",
+     "status": "OUT_OF_DOMAIN",
+     "reason": "18.8–67 Hz, mostly near 65 Hz; the accepted evidence was filtered to 29–31 Hz."
+    },
+    {
+     "dimension": "Target / test modality",
+     "status": "PARTIALLY_SUPPORTED_DOMAIN",
+     "reason": "NDG exists as a modality in the accepted evidence, but here as relative density (%Gmm) rather than dry density (t/m³). Core density is a modality the accepted evidence does not contain."
+    },
+    {
+     "dimension": "Spatial reference",
+     "status": "NOT_ASSESSABLE",
+     "reason": "ID labels only; no coordinates, CRS or documented geometry."
+    },
+    {
+     "dimension": "Physical-anchor adequacy",
+     "status": "NOT_ASSESSABLE",
+     "reason": "Every row carries two physical values, but independent locations cannot be established."
+    }
+   ],
+   "domain_overall": "OUT_OF_DOMAIN",
+   "limitations": [
+    "Processed, aggregated values; no raw records.",
+    "No project, site or coordinate information.",
+    "HMV is not defined in the supplied files.",
+    "One record looks column-shifted in the source.",
+    "Licence not stated, so the records are not redistributed."
+   ]
+  }
+ ],
+ "headline": {
+  "a_cmv_logo_r2": 0.1627290212,
+  "a_ccv_logo_r2": 0.2713592884,
+  "a_ccv_row_r2": 0.3959101739,
+  "a_rmv_source_r2": -0.5916096288,
+  "a_all_op_logo_r2": 0.490399298,
+  "a_all_op_source_r2": -0.006407533971,
+  "b_hmv_core_thickness_r2": -1.747356055,
+  "b_hmv_ndg_thickness_r2": -0.480465413,
+  "b_hmv_core_id_r2": 0.03230503328,
+  "b_op_core_id_r2": 0.6818855996,
+  "b_op_core_thickness_r2": 0.1836749747,
+  "b_op_core_thickness_rf_r2": -0.4741023088,
+  "b_ndg_to_core_thickness_r2": -1.362030899,
+  "b_ndg_op_id_as_supplied_r2": -0.6400070064,
+  "b_ndg_op_id_excluding_r2": 0.6098141625,
+  "b_hmv_core_r_by_thickness": {
+   "38 mm": -0.4418384466,
+   "50.8 mm": -0.1200682184,
+   "63.5 mm": 0.424276507
+  },
+  "a_cmv_positive_groups": 10,
+  "a_cmv_negative_groups": 1
+ },
+ "cross_dataset": {
+  "status": "CROSS-DATASET PREDICTIVE TRANSFER NOT COMPARABLE",
+  "reasons": [
+   "No compaction measurement value is shared: Asphalt A has CMV, CCV, AICV and RMV; Asphalt B has HMV.",
+   "The physical targets differ: NNDG without a unit, against NDG and core density in %Gmm.",
+   "Neither can be compared numerically with the accepted SPARC evidence: different material, nuclear-gauge dry density in t/m³, and roller values summarised differently."
+  ],
+  "transfer_tests_run": 0
+ },
+ "frozen_sparc_reference": {
+  "note": "Read for comparison only; not recomputed.",
+  "held_out_r2": {
+   "UGM_layer2": {
+    "ols": -0.4023848847,
+    "random_forest": -0.4984942132,
+    "ridge": -0.245313649
+   },
+   "soil_layer1": {
+    "ols": -0.08031704186,
+    "random_forest": 0.08579591637,
+    "ridge": -0.1208931779
+   }
+  },
+  "week8": "NO CLEAR RETROSPECTIVE ADVANTAGE"
+ },
+ "abstention": [
+  {
+   "code": "PREDICTIVE_MODEL_NOT_VALIDATED",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "No baseline holds up across the grouped designs, and no independent project or site exists to validate one."
+  },
+  {
+   "code": "PREDICTIVE_UNCERTAINTY_NOT_AVAILABLE",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "Without a model that has passed validation there is no credible predictive uncertainty."
+  },
+  {
+   "code": "INSUFFICIENT_INDEPENDENT_VALIDATION",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "All holdouts are inside one dataset; projects and sites are not identified."
+  },
+  {
+   "code": "MISSING_PROJECT_GROUPING",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "No project or site column."
+  },
+  {
+   "code": "MISSING_SPATIAL_SUPPORT",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "No coordinates, CRS or location geometry."
+  },
+  {
+   "code": "DOMAIN_SHIFT",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "Different material, measurement values and physical targets from the accepted evidence."
+  },
+  {
+   "code": "PHYSICAL_TARGET_INCOMPATIBLE",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "NNDG (unit not stated), NDG %Gmm and core %Gmm are different quantities from each other and from accepted dry density in t/m³."
+  },
+  {
+   "code": "EVIDENCE_CLASS_NOT_ROW_LEVEL",
+   "applies_to": [
+    "ASPHALT_A",
+    "ASPHALT_B"
+   ],
+   "reason": "PUBLISHED_AGGREGATED_REAL roller values do not satisfy the accepted REAL_IC check, which needs row-level REAL_FIELD observations."
+  }
+ ],
+ "interpretation_labels": [
+  {
+   "label": "CROSS-DATASET RELATIONSHIP NOT STABLE",
+   "why": "The direction of the HMV–density association differs between layer-thickness groups in Asphalt B, and the one-input model is worse than the mean when a thickness group is held out. Asphalt A shows a positive within-dataset association. The declared stability rule is not met."
+  },
+  {
+   "label": "EXTERNAL DOMAIN SHIFT OBSERVED",
+   "why": "Both datasets differ from the accepted evidence in material, measurement values and physical target; Asphalt A's CCV values lie entirely outside the accepted reference range."
+  },
+  {
+   "label": "EXTERNAL RELATIONSHIP OBSERVED BUT INDEPENDENT VALIDATION LIMITED",
+   "why": "Applies to Asphalt A only: a positive association between its ICMVs and NNDG, with modest grouped R² inside one dataset and mixed results on the source's own validation file."
+  },
+  {
+   "label": "INSUFFICIENT METADATA FOR INDEPENDENT EXTERNAL VALIDATION",
+   "why": "Neither dataset identifies projects, sites or coordinates."
+  },
+  {
+   "label": "CROSS-DATASET PREDICTIVE TRANSFER NOT COMPARABLE",
+   "why": "No shared measurement value or target; no transfer test was run."
+  },
+  {
+   "label": "EXTERNAL SUPPORT FOR ABSTENTION FRAMEWORK",
+   "why": "The accepted evidence gate did not allow a scientific claim for either dataset, and the grouped results show why: relationships that look usable on random rows weaken or reverse when a source group is held out. This is consistent with abstaining; it is two datasets, not a proof."
+  }
+ ],
+ "not_assessable": [
+  "INDEPENDENT PROJECT/SPATIAL VALIDATION NOT ASSESSABLE",
+  "SPATIAL CANDIDATE PRIORITIZATION NOT ASSESSABLE FROM THIS DATASET"
+ ],
+ "answers": [
+  {
+   "q": "Did the independent asphalt datasets show a stable universal ICMV-density relationship?",
+   "a": "No. Asphalt A shows a positive association inside one dataset. In Asphalt B the direction of the HMV–density association changes between layer-thickness groups."
+  },
+  {
+   "q": "Did performance or relationship strength differ materially across datasets?",
+   "a": "Yes. One-input grouped R² is about +0.16 to +0.27 in Asphalt A and from about −1.75 to +0.22 in Asphalt B, depending on the target and on how records are held out."
+  },
+  {
+   "q": "Did LayerProof's abstention and domain-support logic behave appropriately?",
+   "a": "Yes, on this evidence. The accepted gate allowed no scientific claim for either dataset, both are out of domain relative to the accepted evidence, and the grouped results do not contradict that."
+  },
+  {
+   "q": "What additional claim, if any, can LayerProof now make?",
+   "a": "That it has been examined on two independent public asphalt datasets, that no stable universal relationship between compaction measurement values and density was found, and that its evidence gate withheld a scientific claim for both."
+  },
+  {
+   "q": "What claims remain unsupported?",
+   "a": "Predicting density or stiffness; validity across materials; transfer between datasets; any benefit of the candidate ranking; any field performance."
+  },
+  {
+   "q": "What still requires GPS-located independent spatial data?",
+   "a": "Any evaluation of verification-candidate ranking or of where to test next, and any spatial evidence-support analysis, on data other than SPARC."
+  },
+  {
+   "q": "What still requires prospective field validation?",
+   "a": "Whether candidates raised by LayerProof help an engineer place tests where they add evidence on a live project."
+  }
+ ],
+ "public_statement": "Across two independent public asphalt datasets, compaction measurements did not show a stable universal relationship with physical density. LayerProof therefore keeps evidence specific to its context and abstains when transfer is unsupported."
+}

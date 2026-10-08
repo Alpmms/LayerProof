@@ -1,0 +1,24 @@
+{
+  "name": "layerproof-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "LayerProof public website (static, GitHub Pages). No backend, no runtime dependencies.",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node tools/serve.mjs --watch",
+    "preview": "node tools/serve.mjs",
+    "typecheck": "node tools/syntax-check.mjs",
+    "check": "node tools/check.mjs",
+    "check:browser": "node tools/browser-check.mjs",
+    "content": "node tools/export-content.mjs",
+    "test": "npm run typecheck && npm run build && npm run check"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "playwright": "^1.56.0"
+  }
+}
